@@ -1,0 +1,43 @@
+@use "../../abstracts/variables";
+
+.anchor-link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    // border-bottom: 1.8px solid;
+    transition: variables.$default-transition;
+    font-weight: 600;
+  }
+
+  &:hover,
+  &:active {
+    border-color: transparent;
+  }
+
+  &--primary {
+    &:link,
+    &:visited {
+      color: variables.$color-primary;
+    }
+
+    &:hover,
+    &:active {
+      color: variables.$color-primary-light-3;
+      text-decoration: underline;
+      text-underline-offset: .6rem;
+    }
+  }
+
+  &--secondary {
+    &:link,
+    &:visited {
+      color: variables.$color-secondary;
+    }
+
+    &:hover,
+    &:active {
+      color: variables.$color-secondary-light-2;
+    }
+  }
+}

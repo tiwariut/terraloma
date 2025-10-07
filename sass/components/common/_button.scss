@@ -1,0 +1,115 @@
+@use '../../abstracts/variables';
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    min-height: 3.6rem;
+    line-height: 1;
+
+    text-decoration: none;
+    border: none;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: variables.$color-white;
+    cursor: pointer;
+    transition: variables.$default-transition;
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &--primary {
+    &,
+    &:link,
+    &:visited {
+      background: variables.$color-primary;
+    }
+
+    &:hover,
+    &:active {
+      background-color: variables.$color-primary-dark-2;
+    }
+  }
+
+  &--secondary {
+    &,
+    &:link,
+    &:visited {
+      background: variables.$color-secondary;
+    }
+
+    &:hover,
+    &:active {
+      background-color: variables.$color-secondary-dark-2;
+    }
+  }
+
+  &--white {
+    &,
+    &:link,
+    &:visited {
+      background: variables.$color-white;
+      color: variables.$color-black;
+    }
+  }
+
+  &--black {
+    &,
+    &:link,
+    &:visited {
+      background: variables.$color-black;
+    }
+  }
+
+  &--white-outline {
+    &,
+    &:link,
+    &:visited {
+      background: variables.$color-white;
+      border: 1px solid variables.$color-grey-dark-2;
+      color: variables.$color-grey-dark-2;
+    }
+  }
+}
+
+.button {
+  &__loader {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    height: 1.4rem;
+    
+    .dot {
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: currentColor;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out both;
+
+      &:nth-child(1) { animation-delay: -0.32s; }
+      &:nth-child(2) { animation-delay: -0.16s; }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 
+  40% { 
+    transform: scale(1);
+  }
+}

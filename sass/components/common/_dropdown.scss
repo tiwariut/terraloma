@@ -1,0 +1,71 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
+.dropdown {
+  // display: inline-block;
+  font-size: inherit;
+  position: relative;
+  box-shadow: variables.$default-box-shadow;
+
+  &__input-container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid variables.$color-grey-light-3;
+    border-radius: 4px;
+    transition: variables.$default-transition;
+
+    &--active {
+      border-color: variables.$color-secondary;
+    }
+  }
+
+  &__input {
+    border: none !important;
+    padding: 0.8rem 6.4rem 0.8rem 0.8rem !important;
+
+    &--disabled-search {
+      cursor: pointer;
+      caret-color: transparent;
+    }
+  }
+
+  &__button {
+    padding: 0 0.8rem;
+  }
+
+  &__icon {
+    fill: variables.$color-white;
+
+    &--disabled-search {
+      fill: variables.$color-grey-dark-3;
+    }
+  }
+
+  &__options {
+    list-style: none;
+    text-align: left;
+    border: 2px solid variables.$color-grey-light-2;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: variables.$color-white;
+
+    position: absolute;
+    width: 100%;
+    max-height: 19rem;
+    z-index: 100;
+
+    @include mixins.custom-scrollbar-y;
+  }
+
+  &__option {
+    padding: 0.4rem 0 0.4rem 0.8rem;
+
+    &:hover {
+      background-color: variables.$color-grey-light-2;
+    }
+
+    &--selected {
+      background-color: variables.$color-grey-light-1;
+    }
+  }
+}

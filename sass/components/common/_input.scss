@@ -1,0 +1,24 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-label {
+  visibility: hidden;
+  height: 0;
+  color: variables.$color-grey-dark-1;
+  text-align: left;
+
+  &--visible {
+    visibility: visible;
+    height: auto;
+  }
+}
+
+.input {
+  @include mixins.default-input;
+}

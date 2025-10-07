@@ -1,0 +1,278 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.8rem;
+
+  /* Because we want the header to b sticky later */
+  height: 10rem;
+  padding: 0 3.2rem;
+  position: relative;
+
+  @include mixins.respond(tab-port) {
+    padding: 0 1.2rem;
+  }
+
+  &__logo {
+    @include mixins.brand-logo-dimensions;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__mobile-nav-btn {
+    display: none;
+    z-index: 999999;
+    padding: 0.8rem;
+
+    @include mixins.respond(tab-port) {
+      display: block;
+    }
+
+    &--floated {
+      position: absolute;
+      top: 1rem;
+      right: 35%;
+      border-radius: 50%;
+
+      @include mixins.respond(phone) {
+        right: 55%;
+      }
+    }
+  }
+}
+
+.navbar {
+  @include mixins.respond(tab-port) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    gap: 4.8rem;
+    align-items: center;
+
+    @include mixins.respond(tab-land) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+
+    @include mixins.respond(tab-land) {
+      gap: 2.4rem;
+    }
+
+    &--group-2 {
+      gap: 1.2rem;
+    }
+
+    &--dropdown {
+      width: max-content;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 3.2rem;
+      left: 0;
+      background-color: variables.$color-white;
+      gap: 1.6rem;
+      padding: 1.2rem 3.2rem 1.2rem 1.2rem;
+      box-shadow: variables.$box-shadow-light;
+      z-index: 999;
+      border: 1px solid variables.$color-grey-light-2;
+      border-radius: 4px;
+    }
+
+    &--dropdown-left {
+      top: 6.4rem;
+      left: -13rem;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: variables.$color-grey-dark-1;
+      font-weight: 500;
+      font-size: 1.6rem;
+      transition: variables.$default-transition;
+    }
+
+    &:hover,
+    &:active {
+      color: variables.$color-primary;
+    }
+
+    &--btn {
+      &:link,
+      &:visited {
+        background-color: variables.$color-primary;
+        color: variables.$color-white;
+        padding: 0.4rem 1.2rem;
+        border-radius: 2px;
+        text-align: center;
+      }
+
+      &:hover,
+      &:active {
+        background-color: variables.$color-primary-dark-2;
+      }
+
+      &--outline {
+        &:link,
+        &:visited {
+          background: variables.$color-white;
+          border: 1px solid variables.$color-primary-dark-1;
+          color: variables.$color-primary-dark-1;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &--active {
+      &:link,
+      &:visited {
+        color: variables.$color-primary;
+      }
+    }
+
+    &--dropdown {
+      &:link,
+      &:visited {
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+      }
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: variables.$color-grey-dark-1;
+    transition: variables.$default-transition;
+
+    &--white {
+      fill: variables.$color-white;
+    }
+
+    &--mobile-nav {
+      fill: variables.$color-grey-dark-2;
+      height: 4rem;
+      width: 4rem;
+    }
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &__user-img {
+    display: flex;
+    height: 5rem;
+  }
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgb(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: variables.$box-shadow-light;
+}
+
+.mobile-navbar {
+  display: none;
+  background-color: variables.$color-white;
+  height: 100vh;
+  width: 30%;
+  z-index: 999;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-shadow: variables.$box-shadow-light;
+
+  @include mixins.respond(tab-port) {
+    display: block;
+  }
+
+  @include mixins.respond(phone) {
+    width: 50%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.6rem;
+    border-bottom: 1px solid variables.$color-grey-light-3;
+  }
+
+  &__header-text {
+    font-size: 1.6rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 1.6rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid variables.$color-grey-light-3;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6rem;
+    align-items: center;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: variables.$color-grey-dark-1;
+      font-weight: 500;
+      font-size: 1.6rem;
+      transition: variables.$default-transition;
+    }
+
+    &--active {
+      &:link,
+      &:visited {
+        color: variables.$color-primary;
+      }
+    }
+  }
+}

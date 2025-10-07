@@ -1,0 +1,58 @@
+@use '../../abstracts/variables';
+
+/* Container for the toggle */
+.toggle-switch {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-bottom: 3.2rem;
+  }
+
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.4rem;
+
+  /* Hide default checkbox */
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The track */
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: variables.$color-grey-dark-3;
+    border-radius: 2.4rem;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+
+    /* The circular slider */
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2rem;
+      width: 2rem;
+      left: 0.4rem;
+      bottom: 0.2rem;
+      background-color: variables.$color-white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    /* Toggled state */
+    &--on {
+      background-color: variables.$color-secondary;
+
+      &::before {
+        transform: translateX(2.2rem);
+      }
+    }
+  }
+}

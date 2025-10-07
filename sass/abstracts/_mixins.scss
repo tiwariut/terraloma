@@ -1,0 +1,151 @@
+@use 'variables';
+
+@mixin custom-scrollbar-y {
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: auto;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+
+    /* Track */
+    &-track {
+      background: variables.$color-grey-light-2;
+    }
+
+    /* Handle */
+    &-thumb {
+      background: variables.$color-grey-dark-3;
+
+      &:hover {
+        background: variables.$color-grey-dark-2;
+      }
+    }
+  }
+}
+
+@mixin rounded-icon-filled($background-color, $icon-color) {
+  &__icon-container {
+    display: flex;
+    background-color: $background-color;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    fill: $icon-color;
+  }
+}
+
+@mixin default-input {
+  width: 100% !important;
+  border: 2px solid variables.$color-grey-light-3;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  transition: variables.$default-transition;
+
+  &:focus {
+    outline: none;
+    border: 2px solid variables.$color-grey-dark-2;
+  }
+}
+
+@mixin brand-logo-dimensions {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin background-img-overlay {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: variables.$color-black;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+@mixin accordion-toggle-btn {
+  &__icon-container {
+    height: fit-content;
+    padding: 0.2rem;
+    border-radius: 100%;
+
+    &--close {
+      background-color: variables.$color-grey-light-2;
+      transition: variables.$default-transition;
+    }
+
+    &--open {
+      transition: variables.$default-transition;
+      background-color: variables.$color-primary;
+    }
+  }
+
+  &__icon {
+    &--close {
+      fill: variables.$color-black;
+      transform: rotate(0deg);
+      transition: variables.$default-transition;
+    }
+
+    &--open {
+      fill: variables.$color-white;
+      transform: rotate(45deg);
+      transition: variables.$default-transition;
+    }
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800px
+  }
+}

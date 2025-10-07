@@ -1,0 +1,19 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.with-sidebar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+
+  @include mixins.respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  background-color: variables.$color-grey-light-2;
+  padding: 2.4rem;
+  box-shadow: variables.$box-shadow-light;
+}

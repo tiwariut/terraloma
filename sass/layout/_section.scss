@@ -1,0 +1,12 @@
+@use '../abstracts/variables';
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 1.2rem 3.2rem;
+  margin: 0 auto;
+}
+
+.sticky .section-nav-obs-target {
+  margin-top: variables.$default-spacing-x;
+}

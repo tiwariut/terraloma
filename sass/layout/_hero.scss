@@ -1,0 +1,36 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.hero {
+  margin-top: 10rem;
+
+  display: flex;
+  align-items: center;
+
+  @include mixins.background-img-overlay;
+
+  &__text {
+    color: variables.$color-white;
+  }
+
+  &--small {
+    height: 50vh;
+  }
+
+  &--large {
+    height: 70vh;
+  }
+
+  &__img {
+    object-position: 50% 30%;
+  }
+
+  &__text {
+    text-align: center;
+
+    & > h1,
+    & > h3 {
+      color: variables.$color-white;
+    }
+  }
+}

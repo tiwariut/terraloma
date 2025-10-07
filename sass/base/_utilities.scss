@@ -1,0 +1,48 @@
+@use '../abstracts/variables';
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-end-text {
+  text-align: end;
+}
+
+.u-margin-bottom-extra-small {
+  margin-bottom: 0.8rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-highlight-text-primary {
+  color: variables.$color-primary;
+}
+
+.u-highlight-text-secondary {
+  color: variables.$color-secondary;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-text-bold {
+  font-weight: 700;
+}
+
+.u-display-flex {
+  display: flex;
+}
+
+.u-list-style-none {
+  list-style: none;
+}

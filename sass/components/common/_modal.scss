@@ -1,0 +1,30 @@
+@use '../../abstracts/variables';
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: variables.$color-white;
+  border: 1px solid variables.$color-grey-light-2;
+  border-radius: 4px;
+  z-index: 9999;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+    border-bottom: 1px solid variables.$color-grey-light-3;
+  }
+
+  &__icon {
+    fill: variables.$color-grey-dark-2;
+    cursor: pointer;
+  }
+
+  &__content {
+    font-size: 1.4rem;
+    padding: 1.6rem;
+  }
+}

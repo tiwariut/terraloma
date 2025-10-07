@@ -1,0 +1,27 @@
+@use '../abstracts/variables';
+
+.screen-overlay {
+  overflow: hidden !important;
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: variables.$color-grey-dark-1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 333;
+  }
+
+  &--scroll-enabled {
+    overflow: visible !important;
+  }
+
+  &--disable-navbar {
+    &::after {
+      z-index: 999;
+    }
+  }
+}

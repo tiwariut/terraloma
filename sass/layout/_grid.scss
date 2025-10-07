@@ -1,0 +1,44 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: variables.$default-spacing-x;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: variables.$default-spacing-x;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include mixins.respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mixins.respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+
+  @include mixins.respond(tab-port) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include mixins.respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--center-v {
+  align-items: center;
+}

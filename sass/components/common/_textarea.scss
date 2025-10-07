@@ -1,0 +1,9 @@
+@use "../../abstracts/mixins";
+
+.textarea {
+  resize: none;
+
+  @include mixins.default-input;
+
+  @include mixins.custom-scrollbar-y;
+}
