@@ -18,7 +18,7 @@ const ContactForm = () => {
   const [address, setAddress] = useState('');
   const [formStatus, setFormStatus] = useState(FORM_STATUS.IDLE);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit: any = async (e: any) => {
     e.preventDefault();
     setFormStatus(FORM_STATUS.LOADING);
     try {
