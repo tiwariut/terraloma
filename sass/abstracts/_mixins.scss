@@ -57,11 +57,10 @@
 
 @mixin brand-logo-dimensions {
   height: 100%;
-  width: 100%;
+  width: 50%;
 }
 
 @mixin background-img-overlay {
-  position: relative;
   z-index: 1;
 
   &::after {

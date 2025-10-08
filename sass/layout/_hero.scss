@@ -2,12 +2,17 @@
 @use '../abstracts/variables';
 
 .hero {
-  margin-top: 10rem;
-
   display: flex;
   align-items: center;
 
   @include mixins.background-img-overlay;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+  }
 
   &__text {
     color: variables.$color-white;
@@ -19,6 +24,10 @@
 
   &--large {
     height: 70vh;
+  }
+
+  &--full {
+    height: 100vh;
   }
 
   &__img {

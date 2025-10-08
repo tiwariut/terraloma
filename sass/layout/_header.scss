@@ -6,9 +6,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 4.8rem;
+  text-transform: uppercase;
 
   /* Because we want the header to b sticky later */
-  height: 10rem;
+  height: 6rem;
   padding: 0 3.2rem;
   position: relative;
 
@@ -29,7 +30,7 @@
   &__mobile-nav-btn {
     display: none;
     z-index: 999999;
-    padding: 0.8rem;
+    padding: 0;
 
     @include mixins.respond(tab-port) {
       display: block;
@@ -111,15 +112,16 @@
       align-items: center;
       gap: 0.8rem;
       text-decoration: none;
-      color: variables.$color-grey-dark-1;
-      font-weight: 500;
+      color: variables.$color-white;
+      font-weight: 200;
       font-size: 1.6rem;
+      letter-spacing: 0.5px;
       transition: variables.$default-transition;
     }
 
     &:hover,
     &:active {
-      color: variables.$color-primary;
+      color: variables.$color-grey-light-3;
     }
 
     &--btn {
@@ -204,7 +206,7 @@
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: rgb(255, 255, 255, 0.97);
+  background-color: rgba(variables.$color-primary, 0.97);
   z-index: 999;
   box-shadow: variables.$box-shadow-light;
 }
@@ -263,8 +265,9 @@
     &:visited {
       text-decoration: none;
       color: variables.$color-grey-dark-1;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 1.6rem;
+      letter-spacing: 0.5px;
       transition: variables.$default-transition;
     }
 

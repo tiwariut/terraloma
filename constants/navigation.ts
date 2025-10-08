@@ -25,24 +25,40 @@ export const HEADER_NAVIGATION = [
     navigateTo: '#home'
   },
   {
-    value: 'PHONE',
-    group: NAVIGATION_GROUPS.GROUP_2.value,
-    label: COMPANY_DETAILS.PHONE,
-    navigateTo: `tel:${COMPANY_DETAILS.PHONE}`,
-    type: 'btn',
-    btnType: 'outline',
-    iconName: ICON_PHONE,
-    iconPlacement: PLACEMENT_POSITIONS.LEFT
+    value: 'DESCRIPTION',
+    label: 'Description',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#description'
   },
   {
-    value: 'CONTACT',
-    group: NAVIGATION_GROUPS.GROUP_2.value,
-    navigateTo: '#footer',
-    label: 'Contact Us',
-    type: 'btn',
-    iconName: ICON_CHEVRON_RIGHT,
-    iconType: 'white',
-    iconPlacement: PLACEMENT_POSITIONS.RIGHT
+    value: 'PHOTOS',
+    label: 'Photos',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#photos'
+  },
+  {
+    value: 'MAP',
+    label: 'Map',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#map'
+  },
+  {
+    value: 'LISTING_AGENT',
+    label: 'Listing Agent',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#listing-agent'
+  },
+  {
+    value: 'REQUEST_INFO',
+    label: 'Request Info',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#request-info'
+  },
+  {
+    value: 'SHARE',
+    label: 'Share',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#share'
   }
 ];
 
@@ -51,6 +67,11 @@ export const FOOTER_NAVIGATION = [
     value: 'HOME',
     label: 'Home',
     navigateTo: '#home'
+  },
+  {
+    value: 'DESCRIPTION',
+    label: 'Description',
+    navigateTo: '#description'
   }
 ];
 
