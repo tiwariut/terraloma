@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import Form from './Form';
-import Input from './Input';
+import Form from '@/components/common/Form';
+import Input from '@/components/common/Input';
+import Textarea from '../../common/Textarea';
 
 const FORM_STATUS = {
   IDLE: 'idle',
@@ -13,33 +14,35 @@ const FORM_STATUS = {
 
 const ContactForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
   const [formStatus, setFormStatus] = useState(FORM_STATUS.IDLE);
 
-  const handleSubmit: any = async (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setFormStatus(FORM_STATUS.LOADING);
-    try {
-      const response = await fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, phone, email, address })
-      });
 
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
-      }
+    setFormStatus(FORM_STATUS.LOADING);
+
+    try {
+      // const response = await fetch('/api/send', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({ name, email, phone, message })
+      // });
+
+      // const data = await response.json();
+      // if (!response.ok) {
+      //   throw new Error(data.error || 'Something went wrong');
+      // }
 
       // Clear form and show success message
       setName('');
-      setPhone('');
       setEmail('');
-      setAddress('');
+      setPhone('');
+      setMessage('');
       setFormStatus(FORM_STATUS.SUCCESS);
       setTimeout(() => {
         setFormStatus(FORM_STATUS.IDLE);
@@ -49,22 +52,20 @@ const ContactForm = () => {
       setFormStatus(FORM_STATUS.IDLE);
     }
   };
-
   return (
     <Form
-      headingText='Get your free rental analysis today!'
       headingClassName='u-highlight-text-primary '
       submitBtnType='primary'
-      submitText='Submit'
+      submitText='SEND MESSAGE'
       loading={formStatus === FORM_STATUS.LOADING}
       onSubmit={handleSubmit}
       className='referral__form'
       disabled={
         formStatus === FORM_STATUS.LOADING ||
         !name ||
-        !phone ||
         !email ||
-        !address
+        !phone ||
+        !message
       }
       success={formStatus === FORM_STATUS.SUCCESS}
       successText='Request submitted!'
@@ -73,38 +74,38 @@ const ContactForm = () => {
         type='text'
         name='name'
         id='name'
-        placeholderText='Full Name'
+        placeholderText='Your name'
         value={name}
         isRequired={true}
         onChange={setName}
       />
       <Input
-        type='text'
-        name='phone'
-        id='phone'
-        placeholderText='Phone Number'
-        value={phone}
-        isRequired={true}
-        onChange={setPhone}
-      />
-      <Input
         type='email'
         name='email'
         id='email'
-        placeholderText='Email Address'
+        placeholderText='Email'
         value={email}
         isRequired={true}
         onChange={setEmail}
       />
       <Input
         type='text'
-        name='address'
-        id='address'
-        placeholderText='Rental Address'
-        value={address}
+        name='phone'
+        id='phone'
+        placeholderText='Phone'
+        value={phone}
         isRequired={true}
-        onChange={setAddress}
+        onChange={setPhone}
       />
+
+      <Textarea
+        rows={4}
+        showLabel={true}
+        placeholderText='Your message'
+        value={message}
+        isRequired={false}
+        onChange={setMessage}
+      ></Textarea>
     </Form>
   );
 };

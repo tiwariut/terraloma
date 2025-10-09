@@ -2,6 +2,7 @@ import Image, { StaticImageData } from 'next/image';
 
 import ParsedHTML from '../common/ParsedHTML';
 import Button from '../common/Button';
+import AnchorLink from '../common/AnchorLink';
 
 type HeroProps = {
   imgSrc: StaticImageData;
@@ -10,6 +11,7 @@ type HeroProps = {
   subheading?: string;
   size?: string;
   ctaBtnText?: string;
+  ctaBtnLinkTo?: string;
 };
 
 const Hero = ({
@@ -18,7 +20,8 @@ const Hero = ({
   heading,
   subheading,
   size = 'small',
-  ctaBtnText
+  ctaBtnText,
+  ctaBtnLinkTo
 }: HeroProps) => {
   return (
     <section id='home' className={`hero hero--${size} section-nav-obs-target`}>
@@ -44,8 +47,8 @@ const Hero = ({
             <h5 className='heading-tertiary'>Dripping Springs, TX</h5>
           </div>
 
-          {ctaBtnText && (
-            <Button type='secondary' linkTo='#footer'>
+          {ctaBtnText && ctaBtnLinkTo && (
+            <Button type='secondary' linkTo={ctaBtnLinkTo}>
               {ctaBtnText}
             </Button>
           )}

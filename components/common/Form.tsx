@@ -8,7 +8,7 @@ type FormProps = {
   submitBtnClassName?: string;
   submitBtnType?: string;
   submitText: string;
-  onSubmit: () => void;
+  onSubmit: (e: any) => void;
   loading?: boolean;
   disabled?: boolean;
   success?: boolean;
@@ -46,9 +46,7 @@ const Form = ({
         {submitText}
       </Button>
       {success && successText && (
-        <div className="form__success">
-          {successText}
-        </div>
+        <div className='form__success'>{successText}</div>
       )}
     </form>
   );

@@ -95,6 +95,10 @@ export const DESCRIPTION_SECTION_CONTENT = {
   }
 };
 
+export const CONTACT_SECTION_CONTENT = {
+  HEADING: 'Request Info'
+};
+
 export const ASSOCIATIONS_SECTION_CONTENT = {
   HEADING: 'Proven & Trusted',
   LIST: [

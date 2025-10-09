@@ -1,18 +1,21 @@
 import Image from 'next/image';
 
-import ParsedHTML from '@/components/common/ParsedHTML';
 import Hero from '@/components/layout/Hero';
+
+import AnchorLink from '@/components/common/AnchorLink';
+import Button from '@/components/common/Button';
+import ParsedHTML from '@/components/common/ParsedHTML';
 
 import {
   COMPANY_DETAILS,
   DESCRIPTION_SECTION_CONTENT,
   ASSOCIATIONS_SECTION_CONTENT,
-  AGENT_DETAILS
+  AGENT_DETAILS,
+  CONTACT_SECTION_CONTENT
 } from '@/constants/texts';
-import AnchorLink from '@/components/common/AnchorLink';
 
 import roseCastro from '@/images/rose-castro.jpg';
-import Button from '@/components/common/Button';
+import ContactForm from '@/components/layout/Header/ContactForm';
 
 const {
   NAME,
@@ -52,61 +55,72 @@ export default function Home() {
         subheading={TAGLINE}
         size='full'
         ctaBtnText='Schedule yor visit now!'
+        ctaBtnLinkTo='#contact'
       />
 
       {/* DESCRIPTION SECTION */}
       <section id='description' className='description'>
         <div className='container'>
-          <div className='description__content'>
-            <div className='company'>
-              <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
-                {DESCRIPTION_HEADING}
-              </h2>
-              <div className='description__texts'>
-                <ParsedHTML content={DESCRIPTION_TEXT_1} />
-                <ParsedHTML content={DESCRIPTION_TEXT_2} />
-                <ParsedHTML content={DESCRIPTION_TEXT_3} />
-                <p className='u-highlight-text-secondary u-text-bold'>
-                  {DESCRIPTION_TEXT_4}
-                </p>
-                <p>{DESCRIPTION_TEXT_5}</p>
-              </div>
-            </div>
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+            {DESCRIPTION_HEADING}
+          </h2>
+          <div className='description__texts'>
+            <ParsedHTML content={DESCRIPTION_TEXT_1} />
+            <ParsedHTML content={DESCRIPTION_TEXT_2} />
+            <ParsedHTML content={DESCRIPTION_TEXT_3} />
+            <p className='u-highlight-text-secondary u-text-bold'>
+              {DESCRIPTION_TEXT_4}
+            </p>
+            <p>{DESCRIPTION_TEXT_5}</p>
           </div>
         </div>
       </section>
 
       {/* AGENT SECTION */}
       <section id='agent' className='agent'>
-        <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-small u-center-text'>
-          {AGENT_NAME}
-        </h2>
-        <div className='agent__content'>
-          <div>
-            <AnchorLink linkTo={WEBSITE} type='primary' openInNewTab={true}>
-              {COMPANY_NAME}
-            </AnchorLink>{' '}
-            <span>/ {DESIGNATION}</span>
-          </div>
-          <AnchorLink linkTo={`mailto:${EMAIL}`} type='primary'>
-            {EMAIL}
-          </AnchorLink>
-          <Image className='agent__img' src={roseCastro} alt='Roose Castro' />
-          <div className='agent__contact'>
+        <div>
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-small u-center-text'>
+            {AGENT_NAME}
+          </h2>
+          <div className='agent__content'>
             <div>
-              <span>Mobile:</span>{' '}
-              <AnchorLink linkTo={`tel:${PHONE}`} type='primary'>
-                {PHONE}
-              </AnchorLink>
+              <AnchorLink linkTo={WEBSITE} type='primary' openInNewTab={true}>
+                {COMPANY_NAME}
+              </AnchorLink>{' '}
+              <span>/ {DESIGNATION}</span>
             </div>
-            <div>
-              <span>Office:</span>{' '}
-              <AnchorLink linkTo={`tel:${COMPANY_PHONE}`} type='primary'>
-                {PHONE}
-              </AnchorLink>
+            <AnchorLink linkTo={`mailto:${EMAIL}`} type='primary'>
+              {EMAIL}
+            </AnchorLink>
+            <Image className='agent__img' src={roseCastro} alt='Roose Castro' />
+            <div className='agent__contact'>
+              <div>
+                <span>Mobile:</span>{' '}
+                <AnchorLink linkTo={`tel:${PHONE}`} type='primary'>
+                  {PHONE}
+                </AnchorLink>
+              </div>
+              <div>
+                <span>Office:</span>{' '}
+                <AnchorLink linkTo={`tel:${COMPANY_PHONE}`} type='primary'>
+                  {PHONE}
+                </AnchorLink>
+              </div>
             </div>
+            <Button type='primary'>View Bio</Button>
           </div>
-          <Button type='primary'>View Bio</Button>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section id='contact' className='contact'>
+        <div className='container'>
+          <div className='contact__box'>
+            <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+              {CONTACT_SECTION_CONTENT.HEADING}
+            </h2>
+            <ContactForm />
+          </div>
         </div>
       </section>
 

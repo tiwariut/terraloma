@@ -16,7 +16,7 @@
   }
 }
 
-//  AGENT
+//  AGENT SECTION
 .agent {
   padding: variables.$default-section-padding;
   font-size: 1.8rem;
@@ -40,6 +40,28 @@
     display: flex;
     gap: 2.4rem;
     margin-bottom: 1.2rem;
+  }
+}
+
+// CONTACT SECTION
+.contact {
+  padding: 2.4rem 0 variables.$default-spacing-x 0;
+  font-size: 1.4rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba(variables.$color-white, 0.8) 0%,
+      rgba(variables.$color-white, 0.4) 40%,
+      transparent 50%
+    ),
+    url(../../public/images/contact.jpg);
+  background-size: 100%;
+
+  &__box {
+    background-color: variables.$color-grey-light-2;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 4.8rem 3.2rem;
+    border-radius: 4px;
   }
 }
 

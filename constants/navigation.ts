@@ -52,7 +52,7 @@ export const HEADER_NAVIGATION = [
     value: 'REQUEST_INFO',
     label: 'Request Info',
     group: NAVIGATION_GROUPS.GROUP_1.value,
-    navigateTo: '#request-info'
+    navigateTo: '#contact'
   },
   {
     value: 'SHARE',
@@ -77,6 +77,11 @@ export const FOOTER_NAVIGATION = [
     value: 'AGENT',
     label: 'Listing Agent',
     navigateTo: '#agent'
+  },
+  {
+    value: 'REQUEST_INFO',
+    label: 'Request Info',
+    navigateTo: '#contact'
   }
 ];
 
