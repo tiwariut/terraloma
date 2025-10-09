@@ -9,6 +9,7 @@ type HeroProps = {
   heading?: string;
   subheading?: string;
   size?: string;
+  ctaBtnText?: string;
 };
 
 const Hero = ({
@@ -16,7 +17,8 @@ const Hero = ({
   imgAltText,
   heading,
   subheading,
-  size = 'small'
+  size = 'small',
+  ctaBtnText
 }: HeroProps) => {
   return (
     <section id='home' className={`hero hero--${size} section-nav-obs-target`}>
@@ -42,9 +44,11 @@ const Hero = ({
             <h5 className='heading-tertiary'>Dripping Springs, TX</h5>
           </div>
 
-          <Button type='secondary' linkTo='#footer'>
-            Schedule yor visit now!
-          </Button>
+          {ctaBtnText && (
+            <Button type='secondary' linkTo='#footer'>
+              {ctaBtnText}
+            </Button>
+          )}
         </div>
       </div>
     </section>

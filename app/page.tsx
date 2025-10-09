@@ -6,7 +6,8 @@ import Hero from '@/components/layout/Hero';
 import {
   COMPANY_DETAILS,
   DESCRIPTION_SECTION_CONTENT,
-  ASSOCIATIONS_SECTION_CONTENT
+  ASSOCIATIONS_SECTION_CONTENT,
+  AGENT_DETAILS
 } from '@/constants/texts';
 import AnchorLink from '@/components/common/AnchorLink';
 
@@ -18,6 +19,7 @@ const {
   TAGLINE,
   COVER_IMG: { SRC, ALT_TEXT }
 } = COMPANY_DETAILS;
+
 const {
   COMPANY: {
     HEADING: DESCRIPTION_HEADING,
@@ -28,6 +30,15 @@ const {
     TEXT_5: DESCRIPTION_TEXT_5
   }
 } = DESCRIPTION_SECTION_CONTENT;
+
+const {
+  NAME: AGENT_NAME,
+  COMPANY: { NAME: COMPANY_NAME, WEBSITE, PHONE: COMPANY_PHONE },
+  DESIGNATION,
+  EMAIL,
+  PHONE
+} = AGENT_DETAILS;
+
 const { HEADING: ASSOCIATIONS_SECTION_HEADING, LIST: ASSOCIATIONS_LIST } =
   ASSOCIATIONS_SECTION_CONTENT;
 
@@ -40,6 +51,7 @@ export default function Home() {
         heading={NAME}
         subheading={TAGLINE}
         size='full'
+        ctaBtnText='Schedule yor visit now!'
       />
 
       {/* DESCRIPTION SECTION */}
@@ -67,45 +79,33 @@ export default function Home() {
       {/* AGENT SECTION */}
       <section id='agent' className='agent'>
         <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-small u-center-text'>
-          Rose Castro
+          {AGENT_NAME}
         </h2>
-
         <div className='agent__content'>
           <div>
-            <AnchorLink
-              linkTo='https://www.austinoptionsrealestate.com'
-              type='primary'
-              openInNewTab={true}
-            >
-              Austin Options Realty
+            <AnchorLink linkTo={WEBSITE} type='primary' openInNewTab={true}>
+              {COMPANY_NAME}
             </AnchorLink>{' '}
-            <span>/ Listing Agent</span>
+            <span>/ {DESIGNATION}</span>
           </div>
-
-          <AnchorLink
-            linkTo='mailto:rose.optionsrealty@gmail.com'
-            type='primary'
-          >
-            rose.optionsrealty@gmail.com
+          <AnchorLink linkTo={`mailto:${EMAIL}`} type='primary'>
+            {EMAIL}
           </AnchorLink>
-
           <Image className='agent__img' src={roseCastro} alt='Roose Castro' />
-
           <div className='agent__contact'>
             <div>
               <span>Mobile:</span>{' '}
-              <AnchorLink linkTo='tel:(512) 656-3281' type='primary'>
-                (512) 656-3281
+              <AnchorLink linkTo={`tel:${PHONE}`} type='primary'>
+                {PHONE}
               </AnchorLink>
             </div>
             <div>
               <span>Office:</span>{' '}
-              <AnchorLink linkTo='tel:(512) 250-9882' type='primary'>
-                (512) 656-3281
+              <AnchorLink linkTo={`tel:${COMPANY_PHONE}`} type='primary'>
+                {PHONE}
               </AnchorLink>
             </div>
           </div>
-
           <Button type='primary'>View Bio</Button>
         </div>
       </section>

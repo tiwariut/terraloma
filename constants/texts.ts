@@ -31,6 +31,18 @@ export const COMPANY_DETAILS = {
   }
 };
 
+export const AGENT_DETAILS = {
+  NAME: 'Rose Castro',
+  COMPANY: {
+    NAME: 'Austin Options Realty',
+    WEBSITE: 'https://www.austinoptionsrealestate.com',
+    PHONE: '(512) 656-3281'
+  },
+  DESIGNATION: 'Listing Agent',
+  EMAIL: 'rose.optionsrealty@gmail.com',
+  PHONE: '(512) 656-3281'
+};
+
 export const DESCRIPTION_SECTION_CONTENT = {
   COMPANY: {
     HEADING: 'Property Description',
