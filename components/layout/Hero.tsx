@@ -2,7 +2,6 @@ import Image, { StaticImageData } from 'next/image';
 
 import ParsedHTML from '../common/ParsedHTML';
 import Button from '../common/Button';
-import AnchorLink from '../common/AnchorLink';
 
 type HeroProps = {
   imgSrc: StaticImageData;
