@@ -5,7 +5,7 @@ import { FOOTER_NAVIGATION, LICENSES } from '@/constants/navigation';
 
 import { COMPANY_DETAILS } from '@/constants/texts';
 
-import austinOptionsLogo from 'public/images/austin-options-logo.png';
+import austinOptionsLogo from '@/images/austin-options-logo.png';
 
 const {
   NAME,

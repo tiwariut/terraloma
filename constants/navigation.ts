@@ -43,10 +43,10 @@ export const HEADER_NAVIGATION = [
     navigateTo: '#map'
   },
   {
-    value: 'LISTING_AGENT',
+    value: 'AGENT',
     label: 'Listing Agent',
     group: NAVIGATION_GROUPS.GROUP_1.value,
-    navigateTo: '#listing-agent'
+    navigateTo: '#agent'
   },
   {
     value: 'REQUEST_INFO',
@@ -72,6 +72,11 @@ export const FOOTER_NAVIGATION = [
     value: 'DESCRIPTION',
     label: 'Description',
     navigateTo: '#description'
+  },
+  {
+    value: 'AGENT',
+    label: 'Listing Agent',
+    navigateTo: '#agent'
   }
 ];
 

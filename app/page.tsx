@@ -8,6 +8,10 @@ import {
   DESCRIPTION_SECTION_CONTENT,
   ASSOCIATIONS_SECTION_CONTENT
 } from '@/constants/texts';
+import AnchorLink from '@/components/common/AnchorLink';
+
+import roseCastro from '@/images/rose-castro.jpg';
+import Button from '@/components/common/Button';
 
 const {
   NAME,
@@ -57,6 +61,52 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* AGENT SECTION */}
+      <section id='agent' className='agent'>
+        <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-small u-center-text'>
+          Rose Castro
+        </h2>
+
+        <div className='agent__content'>
+          <div>
+            <AnchorLink
+              linkTo='https://www.austinoptionsrealestate.com'
+              type='primary'
+              openInNewTab={true}
+            >
+              Austin Options Realty
+            </AnchorLink>{' '}
+            <span>/ Listing Agent</span>
+          </div>
+
+          <AnchorLink
+            linkTo='mailto:rose.optionsrealty@gmail.com'
+            type='primary'
+          >
+            rose.optionsrealty@gmail.com
+          </AnchorLink>
+
+          <Image className='agent__img' src={roseCastro} alt='Roose Castro' />
+
+          <div className='agent__contact'>
+            <div>
+              <span>Mobile:</span>{' '}
+              <AnchorLink linkTo='tel:(512) 656-3281' type='primary'>
+                (512) 656-3281
+              </AnchorLink>
+            </div>
+            <div>
+              <span>Office:</span>{' '}
+              <AnchorLink linkTo='tel:(512) 250-9882' type='primary'>
+                (512) 656-3281
+              </AnchorLink>
+            </div>
+          </div>
+
+          <Button type='primary'>View Bio</Button>
         </div>
       </section>
 

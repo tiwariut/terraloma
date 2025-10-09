@@ -1,16 +1,11 @@
-import { ICON_CHEVRON_RIGHT } from './icons';
+import logo from '@/images/logo.png';
 
-import logo from 'public/images/logo.png';
+import hero from '@/images/hero.jpg';
 
-import hero from 'public/images/hero.jpg';
-import caseyBowman from 'public/images/casey-bowman.png';
-import mariaYbarra from 'public/images/maria-ybarra.png';
-import adrianBrown from 'public/images/adrian-brown.png';
-
-import equalHousingOpportunity from 'public/images/equal-housing-opportunity.png';
-import texasRealtors from 'public/images/texas-realtors.png';
-import realtor from 'public/images/realtor.png';
-import austinBoardOfRealtors from 'public/images/austin-board-of-realtors.png';
+import equalHousingOpportunity from '@/images/equal-housing-opportunity.png';
+import texasRealtors from '@/images/texas-realtors.png';
+import realtor from '@/images/realtor.png';
+import austinBoardOfRealtors from '@/images/austin-board-of-realtors.png';
 
 export const METADATA = {
   HOME: {
