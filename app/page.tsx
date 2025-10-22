@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import AgentModal from '@/components/AgentModal';
 
 import AnchorLink from '@/components/common/AnchorLink';
+import MapboxMap from '@/components/common/MapboxMap';
 import ParsedHTML from '@/components/common/ParsedHTML';
 
 import {
@@ -122,6 +123,17 @@ export default function Home() {
             </h2>
             <ContactForm />
           </div>
+        </div>
+      </section>
+
+      {/* MAP SECTION */}
+      <section id='map' className='map'>
+        <div className='container'>
+          <MapboxMap
+            center={[-98.055, 30.257]}
+            zoom={10}
+            style={{ height: '400px', width: '100%' }}
+          />
         </div>
       </section>
 

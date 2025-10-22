@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
 import '../sass/main.scss';
 
 import { METADATA } from '@/constants/texts';
