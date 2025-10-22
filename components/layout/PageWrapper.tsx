@@ -6,7 +6,7 @@ const {
   COVER_IMG: { SRC, ALT_TEXT }
 } = COMPANY_DETAILS;
 
-import ContactForm from '@/components/layout/ContactForm';
+import ContactForm from '@/components/ContactForm';
 
 type PageWrapperProps = {
   children: any;

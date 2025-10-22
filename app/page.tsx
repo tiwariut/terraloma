@@ -2,6 +2,9 @@ import Image from 'next/image';
 
 import Hero from '@/components/layout/Hero';
 
+import ContactForm from '@/components/ContactForm';
+import AgentModal from '@/components/AgentModal';
+
 import AnchorLink from '@/components/common/AnchorLink';
 import ParsedHTML from '@/components/common/ParsedHTML';
 
@@ -14,8 +17,6 @@ import {
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
-import ContactForm from '@/components/layout/ContactForm';
-import AgentModal from '@/components/layout/AgentModal';
 
 const {
   NAME,

@@ -7,7 +7,9 @@
 @use 'base/typography';
 @use 'base/utilities';
 
-// Common
+// Components
+@use 'components/agent-modal';
+
 @use 'components/common/accordion';
 @use 'components/common/anchor-link';
 @use 'components/common/auth-panel';
@@ -28,7 +30,6 @@
 @use 'components/common/toggle-switch';
 
 // Layout
-@use 'layout/agent-modal';
 @use 'layout/background-image';
 @use 'layout/footer';
 @use 'layout/grid';
