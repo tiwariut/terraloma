@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Hero from '@/components/layout/Hero';
 
 import AnchorLink from '@/components/common/AnchorLink';
-import Button from '@/components/common/Button';
 import ParsedHTML from '@/components/common/ParsedHTML';
 
 import {
@@ -15,7 +14,8 @@ import {
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
-import ContactForm from '@/components/layout/Header/ContactForm';
+import ContactForm from '@/components/layout/ContactForm';
+import AgentModal from '@/components/layout/AgentModal';
 
 const {
   NAME,
@@ -54,7 +54,7 @@ export default function Home() {
         heading={NAME}
         subheading={TAGLINE}
         size='full'
-        ctaBtnText='Schedule yor visit now!'
+        ctaBtnText='Schedule your visit now!'
         ctaBtnLinkTo='#contact'
       />
 
@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* AGENT SECTION */}
       <section id='agent' className='agent'>
-        <div>
+        <div className='container'>
           <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-small u-center-text'>
             {AGENT_NAME}
           </h2>
@@ -103,11 +103,11 @@ export default function Home() {
               <div>
                 <span>Office:</span>{' '}
                 <AnchorLink linkTo={`tel:${COMPANY_PHONE}`} type='primary'>
-                  {PHONE}
+                  {COMPANY_PHONE}
                 </AnchorLink>
               </div>
             </div>
-            <Button type='primary'>View Bio</Button>
+            {<AgentModal />}
           </div>
         </div>
       </section>

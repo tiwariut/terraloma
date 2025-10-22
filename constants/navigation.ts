@@ -88,7 +88,7 @@ export const FOOTER_NAVIGATION = [
 export const LICENSES = [
   {
     value: 'TREC_BROKER',
-    label: 'TREC Broker License #9000968; #577993'
+    label: 'TREC Broker License #577993'
   },
   {
     value: 'TREC_PROTECTION',

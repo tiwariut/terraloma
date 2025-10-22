@@ -8,7 +8,7 @@ import { COMPANY_DETAILS } from '@/constants/texts';
 import austinOptionsLogo from '@/images/austin-options-logo.png';
 
 const {
-  NAME,
+  AGENT_COMPANY,
   PHONE,
   EMAIL,
   ADDRESS_LINE_1,
@@ -81,8 +81,7 @@ const Footer = () => {
         </div>
       </div>
       <p className='footer__text'>
-        {NAME} &reg;. All Rights Reserved. Copyright &copy;{' '}
-        {new Date().getFullYear()}. {EMAIL}
+        {AGENT_COMPANY}. All Rights Reserved. {EMAIL}
       </p>
     </footer>
   );

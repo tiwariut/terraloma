@@ -18,10 +18,11 @@ export const METADATA = {
 export const COMPANY_DETAILS = {
   NAME: 'TerraLoma',
   TAGLINE: 'Residential Lots A through G on Mirela Ann Rd.',
-  PHONE: '(512)-250-9882',
+  AGENT_COMPANY: 'Austin Options Realty',
+  PHONE: '(512) 250-9882',
   EMAIL: 'rose.optionsrealty@gmail.com',
-  ADDRESS_LINE_1: '6101 W. Courtyard Dr,',
-  ADDRESS_LINE_2: ' Bldg 2. Suite 100,',
+  ADDRESS_LINE_1: '6101 W. Courtyard Dr.,',
+  ADDRESS_LINE_2: ' Bldg 2, Suite 100,',
   ADDRESS_LINE_3: ' Austin, TX 78730',
   BUSINESS_HOURS: 'Mon - Fri, 9 am - 5 pm',
   LOGO: logo,
@@ -36,11 +37,13 @@ export const AGENT_DETAILS = {
   COMPANY: {
     NAME: 'Austin Options Realty',
     WEBSITE: 'https://www.austinoptionsrealestate.com',
-    PHONE: '(512) 656-3281'
+    PHONE: '(512) 250-9882'
   },
   DESIGNATION: 'Listing Agent',
   EMAIL: 'rose.optionsrealty@gmail.com',
-  PHONE: '(512) 656-3281'
+  PHONE: '(512) 656-3281',
+  BIO: 'I was raised on a dairy farm in Wisconsin bringing warm-hearted values to the table such as honesty, integrity and a sympathetic ear. I’ve enjoyed being a REALTOR® since 2005, and while I can serve all of your real estate needs, I specialize in residential properties. I am passionate about giving 100% to all of my clients and after working in “Corporate America” for 16 years, I am bringing all of my management skills to my clients and my real estate business. As co-owner of Austin Options Realty and Austin Options Property Management, ASSOCIATE BROKER / REALTOR®, and owner of 15 investment properties and 5 short-term rental properties, I can ensure you are receiving the highest quality service whether you are looking to buy or sell your home, looking for investment opportunities, or looking to lease or hire a property management company to manage your investment properties.',
+  TREC_LICENSE: '#535962'
 };
 
 export const DESCRIPTION_SECTION_CONTENT = {
@@ -59,7 +62,7 @@ export const DESCRIPTION_SECTION_CONTENT = {
           solar energy</span>. Build your <span class='u-highlight-text-secondary u-text-bold'>
           dream home
         </span> on these <span class='u-highlight-text-secondary u-text-bold'>
-          1.12-acre to 2.66-acre lots
+          1.12 acre to 2.66 acre lots
         </span>
         featuring <span class='u-highlight-text-secondary u-text-bold'>stunning Hill Country views</span> and <span class='u-highlight-text-secondary u-text-bold'>
           mature trees</span>, in a neighborhood inspired by the beauty and spirit of <span class='u-highlight-text-secondary u-text-bold'>

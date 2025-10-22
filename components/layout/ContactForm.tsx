@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import Form from '@/components/common/Form';
 import Input from '@/components/common/Input';
-import Textarea from '../../common/Textarea';
+import Textarea from '@/components/common/Textarea';
 
 const FORM_STATUS = {
   IDLE: 'idle',

@@ -10,7 +10,7 @@ type ModalProps = {
   onClose?: () => void;
 };
 
-const Modal = ({ children, className, heading, onClose }: ModalProps) => {
+const Modal = ({ children, className = '', heading, onClose }: ModalProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const modalRef = useRef(null);

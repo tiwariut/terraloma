@@ -1,0 +1,49 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.agent-modal {
+  &__header {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+
+    @include mixins.respond(phone) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    max-width: 20rem;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  &__content {
+    max-height: 25rem;
+    padding: 1.2rem;
+
+    @include mixins.custom-scrollbar-y;
+  }
+
+  &__content-heading {
+    font-size: 2rem;
+
+    @include mixins.respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__info-list {
+    list-style: none;
+    margin-top: 1.2rem;
+  }
+}
