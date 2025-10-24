@@ -16,6 +16,72 @@
   }
 }
 
+// RESIDENTIAL LOTS SECTION
+.residential-lots {
+  padding: 2.4rem 0 variables.$default-spacing-x 0;
+  padding: variables.$default-section-padding;
+  background-color: variables.$color-grey-light-2;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.8;
+
+  &__lots {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @include mixins.respond(phone) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__lot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    align-items: center;
+    text-align: center;
+
+    @include mixins.respond(phone) {
+      grid-template-columns: 1fr;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid variables.$color-grey-dark-3;
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+
+  &__lot:nth-child(even) &__info {
+    order: 1;
+
+    @include mixins.respond(phone) {
+      order: 0;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__badge {
+    background-color: variables.$color-secondary;
+    color: variables.$color-white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+
+    position: absolute;
+    top: 8px;
+    left: -16px;
+  }
+}
+
 //  AGENT SECTION
 .agent {
   padding: variables.$default-section-padding;

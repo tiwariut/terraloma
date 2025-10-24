@@ -14,7 +14,8 @@ import {
   DESCRIPTION_SECTION_CONTENT,
   ASSOCIATIONS_SECTION_CONTENT,
   AGENT_DETAILS,
-  CONTACT_SECTION_CONTENT
+  CONTACT_SECTION_CONTENT,
+  RESIDENTIAL_LOTS_SECTION_CONTENT
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
@@ -35,6 +36,9 @@ const {
     TEXT_5: DESCRIPTION_TEXT_5
   }
 } = DESCRIPTION_SECTION_CONTENT;
+
+const { HEADING: RESIDENTIAL_LOTS_HEADING, LOTS } =
+  RESIDENTIAL_LOTS_SECTION_CONTENT;
 
 const {
   NAME: AGENT_NAME,
@@ -74,6 +78,64 @@ export default function Home() {
               {DESCRIPTION_TEXT_4}
             </p>
             <p>{DESCRIPTION_TEXT_5}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* RESIDENTIAL LOTS SECTION */}
+      <section id='residential-lots' className='residential-lots'>
+        <div className='container'>
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+            {RESIDENTIAL_LOTS_HEADING}
+          </h2>
+
+          <div className='residential-lots__lots'>
+            {LOTS.map(
+              ({
+                value,
+                name,
+                address,
+                area,
+                price,
+                links,
+                images,
+                isSold
+              }) => (
+                <div key={value} className='residential-lots__lot'>
+                  <div className='residential-lots__info'>
+                    <h3 className='heading-tertiary u-highlight-text-secondary u-text-bold u-margin-bottom-small'>
+                      {name}
+                    </h3>
+                    <p>{address}</p>
+                    <p>
+                      {area} for {price}
+                    </p>
+                    {links?.map(({ id, link, label }) => (
+                      <AnchorLink
+                        type='primary'
+                        linkTo={link}
+                        openInNewTab={true}
+                        key={id}
+                      >
+                        {label}
+                      </AnchorLink>
+                    ))}
+                  </div>
+
+                  <div className='residential-lots__image-container'>
+                    <Image
+                      className='residential-lots__image'
+                      src={images[0]}
+                      alt='Lot A'
+                    />
+
+                    {isSold && (
+                      <span className='residential-lots__badge'>SOLD</span>
+                    )}
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>

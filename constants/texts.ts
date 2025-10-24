@@ -7,6 +7,48 @@ import texasRealtors from '@/images/texas-realtors.png';
 import realtor from '@/images/realtor.png';
 import austinBoardOfRealtors from '@/images/austin-board-of-realtors.png';
 
+import lotA1 from '@/images/lots/lot-a/lot-a-1.jpg';
+import lotA2 from '@/images/lots/lot-a/lot-a-2.jpg';
+import lotA3 from '@/images/lots/lot-a/lot-a-3.jpg';
+import lotA4 from '@/images/lots/lot-a/lot-a-4.jpg';
+import lotA5 from '@/images/lots/lot-a/lot-a-5.jpg';
+
+import lotB1 from '@/images/lots/lot-b/lot-b-1.jpg';
+import lotB2 from '@/images/lots/lot-b/lot-b-2.jpg';
+import lotB3 from '@/images/lots/lot-b/lot-b-3.jpg';
+import lotB4 from '@/images/lots/lot-b/lot-b-4.jpg';
+import lotB5 from '@/images/lots/lot-b/lot-b-5.jpg';
+
+import lotC1 from '@/images/lots/lot-c/lot-c-1.jpg';
+import lotC2 from '@/images/lots/lot-c/lot-c-2.jpg';
+import lotC3 from '@/images/lots/lot-c/lot-c-3.jpg';
+import lotC4 from '@/images/lots/lot-c/lot-c-4.jpg';
+
+import lotD1 from '@/images/lots/lot-d/lot-d-1.jpg';
+import lotD2 from '@/images/lots/lot-d/lot-d-2.jpg';
+import lotD3 from '@/images/lots/lot-d/lot-d-3.jpg';
+import lotD4 from '@/images/lots/lot-d/lot-d-4.jpg';
+import lotD5 from '@/images/lots/lot-d/lot-d-5.jpg';
+
+import lotE1 from '@/images/lots/lot-e/lot-e-1.jpg';
+import lotE2 from '@/images/lots/lot-e/lot-e-2.jpg';
+import lotE3 from '@/images/lots/lot-e/lot-e-3.jpg';
+import lotE4 from '@/images/lots/lot-e/lot-e-4.jpg';
+
+import lotF1 from '@/images/lots/lot-f/lot-f-1.jpg';
+import lotF2 from '@/images/lots/lot-f/lot-f-2.jpg';
+import lotF3 from '@/images/lots/lot-f/lot-f-3.jpg';
+import lotF4 from '@/images/lots/lot-f/lot-f-4.jpg';
+import lotF5 from '@/images/lots/lot-f/lot-f-5.jpg';
+import lotF6 from '@/images/lots/lot-f/lot-f-6.jpg';
+
+import lotG1 from '@/images/lots/lot-g/lot-g-1.jpg';
+import lotG2 from '@/images/lots/lot-g/lot-g-2.jpg';
+import lotG3 from '@/images/lots/lot-g/lot-g-3.jpg';
+import lotG4 from '@/images/lots/lot-g/lot-g-4.jpg';
+import lotG5 from '@/images/lots/lot-g/lot-g-5.jpg';
+import lotG6 from '@/images/lots/lot-g/lot-g-6.jpg';
+
 export const METADATA = {
   HOME: {
     TITLE: 'TerraLoma | Residential Lots',
@@ -96,6 +138,97 @@ export const DESCRIPTION_SECTION_CONTENT = {
     TEXT_5:
       'Build Native and Workshop No. 5 are building a stunning 2-story home on Lot B.'
   }
+};
+
+export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
+  HEADING: 'Residential Lots',
+  LOTS: [
+    {
+      value: 'LOT_A',
+      name: 'Lot A',
+      address: '32000 Mirela Ann Rd, Dripping Springs, TX',
+      area: '1.12 Acres',
+      price: '$285,000',
+      description: '',
+      links: [
+        {
+          id: 1,
+          link: 'https://portal.onehome.com/en-US/share/1195876z84740',
+          label: 'MLS Link'
+        }
+      ],
+      images: [lotA1, lotA2, lotA3, lotA4, lotA5]
+    },
+    {
+      value: 'LOT_B',
+      name: 'Lot B',
+      address: '31890 Mirela Ann Rd, Dripping Springs, TX',
+      area: '1.13 Acres',
+      price: '$285,000',
+      description: '',
+      images: [lotB1, lotB2, lotB3, lotB4, lotB5]
+    },
+    {
+      value: 'LOT_C',
+      name: 'Lot C',
+      address: '31930 Mirela Ann Rd, Dripping Springs, TX',
+      area: '1.12 Acres',
+      price: '$285,000',
+      description: '',
+      images: [lotC1, lotC2, lotC3, lotC4]
+    },
+    {
+      value: 'LOT_D',
+      name: 'Lot D',
+      address: '31860 Mirela Ann Rd, Dripping Springs, TX',
+      area: '1.43 Acres',
+      price: '$315,000',
+      description: '',
+      links: [
+        {
+          id: 1,
+          link: 'https://portal.onehome.com/en-US/share/1195878w32150',
+          label: 'MLS Link'
+        }
+      ],
+      images: [lotD1, lotD2, lotD3, lotD4, lotD5]
+    },
+    {
+      value: 'LOT_E',
+      name: 'Lot E',
+      address: '31842 Mirela Ann Rd, Dripping Springs, TX',
+      area: '1.67 Acres',
+      price: '$355,000',
+      description: '',
+      images: [lotE1, lotE2, lotE3, lotE4],
+      isSold: true
+    },
+    {
+      value: 'LOT_F',
+      name: 'Lot F',
+      address: '31834 Mirela Ann Rd, Dripping Springs, TX',
+      area: '2.34 Acre',
+      price: '$315,000',
+      description: '',
+      images: [lotF1, lotF2, lotF3, lotF4, lotF5, lotF6]
+    },
+    {
+      value: 'LOT_G',
+      name: 'Lot G',
+      address: '31822 Mirela Ann Rd, Dripping Springs, TX',
+      area: '2.66 Acres',
+      price: '$460,000',
+      description: '',
+      links: [
+        {
+          id: 1,
+          link: 'https://portal.onehome.com/en-US/share/1195879l88767',
+          label: 'MLS Link'
+        }
+      ],
+      images: [lotF1, lotF2, lotF3, lotF4, lotF5, lotF6]
+    }
+  ]
 };
 
 export const CONTACT_SECTION_CONTENT = {
