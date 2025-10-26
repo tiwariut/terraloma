@@ -10,6 +10,7 @@
 
   &__slide {
     position: relative;
+    cursor: pointer;
 
     animation-name: fade;
     animation-duration: 1.5s;
@@ -19,11 +20,22 @@
     position: absolute;
     top: 4px;
     left: 8px;
+
+    &--preview {
+      color: variables.$color-grey-dark-3;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
   }
 
   &__image {
     width: 100%;
     height: auto;
+
+    &--preview {
+      height: 100%;
+      width: auto;
+    }
   }
 
   &__caption {
@@ -33,6 +45,10 @@
     transform: translate(-50%, -50%);
     font-size: 1.4rem;
     width: 90%;
+
+    &--preview {
+      width: auto;
+    }
   }
 
   &__control {
@@ -43,6 +59,14 @@
     cursor: pointer;
     padding: 0.8rem;
     transition: variables.$default-transition;
+
+    &--preview {
+      color: variables.$color-grey-dark-3;
+
+      &:hover {
+        color: variables.$color-white;
+      }
+    }
 
     &--prev {
       left: 0;
@@ -75,6 +99,16 @@
     &--active {
       background-color: variables.$color-grey-dark-2;
     }
+  }
+
+  &__preview-modal {
+    top: 0 !important;
+    left: 0 !important;
+    transform: translate(0, 0) !important;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 !important;
+    background-color: variables.$color-grey-light-3 !important;
   }
 }
 
