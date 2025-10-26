@@ -7,6 +7,7 @@ import AgentModal from '@/components/AgentModal';
 
 import AnchorLink from '@/components/common/AnchorLink';
 import Carousel from '@/components/common/Carousel';
+import Icon from '@/components/common/Icon';
 import MapboxMap from '@/components/common/MapboxMap';
 import ParsedHTML from '@/components/common/ParsedHTML';
 
@@ -16,7 +17,8 @@ import {
   ASSOCIATIONS_SECTION_CONTENT,
   AGENT_DETAILS,
   CONTACT_SECTION_CONTENT,
-  RESIDENTIAL_LOTS_SECTION_CONTENT
+  RESIDENTIAL_LOTS_SECTION_CONTENT,
+  DOCS_AND_LINKS_SECTION_CONTENT
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
@@ -49,7 +51,15 @@ const {
   PHONE
 } = AGENT_DETAILS;
 
-const { HEADING: ASSOCIATIONS_SECTION_HEADING, LIST: ASSOCIATIONS_LIST } =
+const {
+  HEADING: DOCS_AND_LINKS_HEADING,
+  DOCUMENTS,
+  DOCUMENT_ICON,
+  LINKS,
+  LINK_ICON
+} = DOCS_AND_LINKS_SECTION_CONTENT;
+
+const { HEADING: ASSOCIATIONS_HEADING, LIST: ASSOCIATIONS_LIST } =
   ASSOCIATIONS_SECTION_CONTENT;
 
 export default function Home() {
@@ -104,7 +114,7 @@ export default function Home() {
               }) => (
                 <div key={value} className='residential-lots__lot'>
                   <div className='residential-lots__info'>
-                    <h3 className='heading-tertiary u-highlight-text-secondary u-text-bold u-margin-bottom-small'>
+                    <h3 className='heading-tertiary u-highlight-text-primary u-text-bold u-margin-bottom-small'>
                       {name}
                     </h3>
                     <p>{address}</p>
@@ -134,6 +144,17 @@ export default function Home() {
               )
             )}
           </div>
+        </div>
+      </section>
+
+      {/* MAP SECTION */}
+      <section id='map' className='map'>
+        <div className='container'>
+          <MapboxMap
+            center={[-98.055, 30.257]}
+            zoom={10}
+            style={{ height: '400px', width: '100%' }}
+          />
         </div>
       </section>
 
@@ -173,6 +194,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* DOCUMENTS AND LINKS SECTION */}
+      <section id='docs-and-links' className='docs-and-links'>
+        <div className='container'>
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+            {DOCS_AND_LINKS_HEADING}
+          </h2>
+          <div className='docs-and-links__content'>
+            <ul className='docs-and-links__docs'>
+              {DOCUMENTS.map(({ id, link, label }) => (
+                <li key={id} className='docs-and-links__doc '>
+                  <AnchorLink
+                    className='docs-and-links__doc-link'
+                    type='primary'
+                    linkTo={link}
+                    openInNewTab={true}
+                  >
+                    <Icon name={DOCUMENT_ICON} blockClass='docs-and-links' />
+                    <span>{label}</span>
+                  </AnchorLink>
+                </li>
+              ))}
+            </ul>
+
+            <ul className='docs-and-links__links'>
+              {LINKS.map(({ id, link, label, value, logo }) => (
+                <li key={id} className='docs-and-links__link'>
+                  <div className='docs-and-links__link-header'>
+                    <h4>{label}</h4>
+                    <AnchorLink
+                      type='primary'
+                      linkTo={link}
+                      openInNewTab={true}
+                    >
+                      <Icon name={LINK_ICON} />
+                    </AnchorLink>
+                  </div>
+                  <AnchorLink type='primary' linkTo={link} openInNewTab={true}>
+                    <Image
+                      className='docs-and-links__logo'
+                      src={logo}
+                      alt={value}
+                    />
+                  </AnchorLink>
+                </li>
+              ))}
+            </ul>
+
+            {/* <ul className='docs-and-links__links'>
+              <AnchorLink type='primary' linkTo={DOCUMENTS[0].link}>
+                <Icon name={DOCUMENT_ICON} blockClass={''} />
+                {DOCUMENTS[0].label}
+              </AnchorLink>
+            </ul> */}
+          </div>
+          {/* <Icon name={ICON_LINK} blockClass={''} /> */}
+        </div>
+      </section>
+
       {/* CONTACT SECTION */}
       <section id='contact' className='contact'>
         <div className='container'>
@@ -185,23 +264,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MAP SECTION */}
-      <section id='map' className='map'>
-        <div className='container'>
-          <MapboxMap
-            center={[-98.055, 30.257]}
-            zoom={10}
-            style={{ height: '400px', width: '100%' }}
-          />
-        </div>
-      </section>
-
       {/* ASSOCIATIONS SECTION */}
       <section className='associations'>
         <div className='container'>
           <div className='associations__content'>
             <h2 className='heading-secondary u-highlight-text-primary '>
-              {ASSOCIATIONS_SECTION_HEADING}
+              {ASSOCIATIONS_HEADING}
             </h2>
             <div className='associations__list'>
               {ASSOCIATIONS_LIST.map(({ id, title, logo }) => (

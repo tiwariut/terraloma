@@ -1,3 +1,5 @@
+import { ICON_FILE_TEXT, ICON_LINK } from './icons';
+
 import logo from '@/images/logo.png';
 
 import hero from '@/images/hero.jpg';
@@ -47,6 +49,10 @@ import lotG3 from '@/images/lots/lot-g/lot-g-3.jpg';
 import lotG4 from '@/images/lots/lot-g/lot-g-4.jpg';
 import lotG5 from '@/images/lots/lot-g/lot-g-5.jpg';
 import lotG6 from '@/images/lots/lot-g/lot-g-6.jpg';
+
+import corridorTitle from '@/images/corridor-title-logo.png';
+import workshopNo5 from '@/images/workshop-no-5-logo.png';
+import buildNative from '@/images/build-native-logo.png';
 
 export const METADATA = {
   HOME: {
@@ -341,6 +347,53 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
             'Aerial view of TerraLoma Subdivision, the surrounding neighborhoods, and the Hill Country. The TerraScena Subdivision, similar style neighborhood, is located on the other side of Mirela Ann Rd.'
         }
       ]
+    }
+  ]
+};
+
+export const DOCS_AND_LINKS_SECTION_CONTENT = {
+  HEADING: 'Document & Links',
+  DOCUMENT_ICON: ICON_FILE_TEXT,
+  DOCUMENTS: [
+    {
+      id: 1,
+      label:
+        'Declaration of Covenants, Conditions, and Restrictions for TerraLoma',
+      link: 'documents/declaration-of-convenants.pdf'
+    },
+    {
+      id: 2,
+      label: 'Bylaws of TerraLoma Property Owners Association, Inc.',
+      link: '/documents/bylaws-of-terraloma.pdf'
+    },
+    {
+      id: 3,
+      label: 'Recorded Plat For TerraLoma Subdivision',
+      link: '/documents/recorded-plat.pdf'
+    }
+  ],
+  LINK_ICON: ICON_LINK,
+  LINKS: [
+    {
+      id: 1,
+      link: 'https://corridortitle.com',
+      label: 'Title Company',
+      value: 'Corridor Title',
+      logo: corridorTitle
+    },
+    {
+      id: 2,
+      link: 'https://www.workshopno5.com',
+      label: 'Preferred Architect',
+      value: 'Workshop No. 5',
+      logo: workshopNo5
+    },
+    {
+      id: 3,
+      link: 'https://corridortitle.com',
+      label: 'Preferred Builder',
+      value: 'Build Native',
+      logo: buildNative
     }
   ]
 };

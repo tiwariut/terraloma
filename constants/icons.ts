@@ -24,6 +24,7 @@ export const ICON_EXIT = 'icon-exit';
 export const ICON_AREA_GRAPH = 'icon-area-graph';
 export const ICON_PHONE = 'icon-phone';
 export const ICON_PLUS = 'icon-plus';
+export const ICON_FILE_TEXT = 'icon-file-text';
 
 // CUSTOM
 export const ICON_LOGO = 'icon-logo';

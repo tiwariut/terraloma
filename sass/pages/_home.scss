@@ -85,6 +85,7 @@
 //  AGENT SECTION
 .agent {
   padding: variables.$default-section-padding;
+  background-color: variables.$color-grey-light-2;
   font-size: 1.8rem;
   font-weight: 600;
 
@@ -106,6 +107,67 @@
     display: flex;
     gap: 2.4rem;
     margin-bottom: 1.2rem;
+  }
+}
+
+// DOCUMENTS AND LINKS SECTION
+.docs-and-links {
+  padding: 2.4rem 0 variables.$default-spacing-x 0;
+  font-size: 1.4rem;
+
+  &__docs,
+  &__links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12.8rem;
+    row-gap: 6.4rem;
+    padding: 2.4rem;
+    padding-bottom: 4.8rem;
+    border-bottom: 2px solid rgba(variables.$color-grey-dark-3, 0.4);
+
+    @include mixins.respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mixins.respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__links {
+    padding-top: 4.8rem;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  &__doc-link {
+    display: flex !important;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &__link-header {
+    text-align: center;
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__logo {
+    height: 8rem;
+    width: fit-content;
   }
 }
 
@@ -131,6 +193,7 @@
   }
 }
 
+// MAP SECTION
 .map {
   padding: 4.8rem 0;
 }
