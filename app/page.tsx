@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import AgentModal from '@/components/AgentModal';
 
 import AnchorLink from '@/components/common/AnchorLink';
+import Carousel from '@/components/common/Carousel';
 import MapboxMap from '@/components/common/MapboxMap';
 import ParsedHTML from '@/components/common/ParsedHTML';
 
@@ -123,11 +124,7 @@ export default function Home() {
                   </div>
 
                   <div className='residential-lots__image-container'>
-                    <Image
-                      className='residential-lots__image'
-                      src={images[0]}
-                      alt='Lot A'
-                    />
+                    <Carousel images={images} />
 
                     {isSold && (
                       <span className='residential-lots__badge'>SOLD</span>

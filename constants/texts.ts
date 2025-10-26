@@ -11,7 +11,6 @@ import lotA1 from '@/images/lots/lot-a/lot-a-1.jpg';
 import lotA2 from '@/images/lots/lot-a/lot-a-2.jpg';
 import lotA3 from '@/images/lots/lot-a/lot-a-3.jpg';
 import lotA4 from '@/images/lots/lot-a/lot-a-4.jpg';
-import lotA5 from '@/images/lots/lot-a/lot-a-5.jpg';
 
 import lotB1 from '@/images/lots/lot-b/lot-b-1.jpg';
 import lotB2 from '@/images/lots/lot-b/lot-b-2.jpg';
@@ -157,7 +156,12 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
           label: 'MLS Link'
         }
       ],
-      images: [lotA1, lotA2, lotA3, lotA4, lotA5]
+      images: [
+        { id: 1, image: lotA1, caption: 'Aerial View' },
+        { id: 2, image: lotA2, caption: 'Aerial View' },
+        { id: 3, image: lotA3, caption: 'Test 3' },
+        { id: 4, image: lotA4, caption: 'Test 4' }
+      ]
     },
     {
       value: 'LOT_B',
@@ -166,7 +170,13 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       area: '1.13 Acres',
       price: '$285,000',
       description: '',
-      images: [lotB1, lotB2, lotB3, lotB4, lotB5]
+      images: [
+        { id: 1, image: lotB1, caption: 'Aerial View' },
+        { id: 2, image: lotB2, caption: 'Aerial View' },
+        { id: 3, image: lotB3, caption: '' },
+        { id: 4, image: lotB4, caption: '' },
+        { id: 5, image: lotB5, caption: '' }
+      ]
     },
     {
       value: 'LOT_C',
@@ -175,7 +185,12 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       area: '1.12 Acres',
       price: '$285,000',
       description: '',
-      images: [lotC1, lotC2, lotC3, lotC4]
+      images: [
+        { id: 1, image: lotC1, caption: 'Aerial View' },
+        { id: 2, image: lotC2, caption: 'Aerial View' },
+        { id: 3, image: lotC3, caption: '' },
+        { id: 4, image: lotC4, caption: '' }
+      ]
     },
     {
       value: 'LOT_D',
@@ -191,7 +206,13 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
           label: 'MLS Link'
         }
       ],
-      images: [lotD1, lotD2, lotD3, lotD4, lotD5]
+      images: [
+        { id: 1, image: lotD1, caption: 'Aerial View' },
+        { id: 2, image: lotD2, caption: 'Aerial View' },
+        { id: 3, image: lotD3, caption: '' },
+        { id: 4, image: lotD4, caption: '' },
+        { id: 5, image: lotD5, caption: '' }
+      ]
     },
     {
       value: 'LOT_E',
@@ -200,7 +221,29 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       area: '1.67 Acres',
       price: '$355,000',
       description: '',
-      images: [lotE1, lotE2, lotE3, lotE4],
+      images: [
+        {
+          id: 1,
+          image: lotE1,
+          caption:
+            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 2,
+          image: lotE2,
+          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 3,
+          image: lotE3,
+          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 4,
+          image: lotE4,
+          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        }
+      ],
       isSold: true
     },
     {
@@ -210,7 +253,41 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       area: '2.34 Acre',
       price: '$315,000',
       description: '',
-      images: [lotF1, lotF2, lotF3, lotF4, lotF5, lotF6]
+      images: [
+        {
+          id: 1,
+          image: lotF1,
+          caption:
+            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 2,
+          image: lotF2,
+          caption:
+            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 3,
+          image: lotF3,
+          caption:
+            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 4,
+          image: lotF4,
+          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 5,
+          image: lotF5,
+          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 6,
+          image: lotF6,
+          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        }
+      ]
     },
     {
       value: 'LOT_G',
@@ -226,7 +303,44 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
           label: 'MLS Link'
         }
       ],
-      images: [lotF1, lotF2, lotF3, lotF4, lotF5, lotF6]
+      images: [
+        {
+          id: 1,
+          image: lotG1,
+          caption:
+            'Aerial View - Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 2,
+          image: lotG2,
+          caption:
+            'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 3,
+          image: lotG3,
+          caption:
+            'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 4,
+          image: lotG4,
+          caption:
+            'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+        },
+        {
+          id: 5,
+          image: lotG5,
+          caption:
+            'Aerial of TerraScena Subdivision located on the other side of Mirela Ann Rd. Deed Restrictions and HOA Documents, including architectural and building requirement, are very similar to TerraLoma.'
+        },
+        {
+          id: 6,
+          image: lotG6,
+          caption:
+            'Aerial view of TerraLoma Subdivision, the surrounding neighborhoods, and the Hill Country. The TerraScena Subdivision, similar style neighborhood, is located on the other side of Mirela Ann Rd.'
+        }
+      ]
     }
   ]
 };
