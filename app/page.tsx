@@ -102,16 +102,7 @@ export default function Home() {
 
           <div className='residential-lots__lots'>
             {LOTS.map(
-              ({
-                value,
-                name,
-                address,
-                area,
-                price,
-                links,
-                images,
-                isSold
-              }) => (
+              ({ value, name, address, area, price, links, images, badge }) => (
                 <div key={value} className='residential-lots__lot'>
                   <div className='residential-lots__info'>
                     <h3 className='heading-tertiary u-highlight-text-primary u-text-bold u-margin-bottom-small'>
@@ -136,8 +127,10 @@ export default function Home() {
                   <div className='residential-lots__image-container'>
                     <Carousel images={images} />
 
-                    {isSold && (
-                      <span className='residential-lots__badge'>SOLD</span>
+                    {badge && (
+                      <span className='residential-lots__badge'>
+                        {badge.toUpperCase()}
+                      </span>
                     )}
                   </div>
                 </div>
