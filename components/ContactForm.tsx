@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import Form from '@/components/common/Form';
 import Input from '@/components/common/Input';
@@ -18,11 +19,31 @@ const ContactForm = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [formStatus, setFormStatus] = useState(FORM_STATUS.IDLE);
+  const [verified, setVerified] = useState(false);
+
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  const handleVerify = async (token: string | null) => {
+    if (!token) return;
+    const res = await fetch('/api/verify-recaptcha', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token })
+    });
+    const data = await res.json();
+
+    if (data.success) setVerified(true);
+  };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     setFormStatus(FORM_STATUS.LOADING);
+
+    if (!verified) {
+      setFormStatus(FORM_STATUS.IDLE);
+      return;
+    }
 
     try {
       // const response = await fetch('/api/send', {
@@ -51,7 +72,14 @@ const ContactForm = () => {
       console.error('Error:', error);
       setFormStatus(FORM_STATUS.IDLE);
     }
+
+    // Reset Captcha
+    setVerified(false);
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
   };
+
   return (
     <Form
       headingClassName='u-highlight-text-primary '
@@ -65,7 +93,8 @@ const ContactForm = () => {
         !name ||
         !email ||
         !phone ||
-        !message
+        !message ||
+        !verified
       }
       success={formStatus === FORM_STATUS.SUCCESS}
       successText='Request submitted!'
@@ -106,6 +135,12 @@ const ContactForm = () => {
         isRequired={false}
         onChange={setMessage}
       ></Textarea>
+
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+        onChange={handleVerify}
+      />
     </Form>
   );
 };

@@ -59,6 +59,12 @@ export const HEADER_NAVIGATION = [
     label: 'Request Info',
     group: NAVIGATION_GROUPS.GROUP_1.value,
     navigateTo: '#contact'
+  },
+  {
+    value: 'FLYERS',
+    label: 'Flyers',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#flyers'
   }
 ];
 
@@ -97,6 +103,11 @@ export const FOOTER_NAVIGATION = [
     value: 'REQUEST_INFO',
     label: 'Request Info',
     navigateTo: '#contact'
+  },
+  {
+    value: 'FLYERS',
+    label: 'Flyers',
+    navigateTo: '#flyers'
   }
 ];
 

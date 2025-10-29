@@ -54,6 +54,10 @@ import corridorTitle from '@/images/corridor-title-logo.png';
 import workshopNo5 from '@/images/workshop-no-5-logo.png';
 import buildNative from '@/images/build-native-logo.png';
 
+import sampleFlyer1 from '@/images/flyers/sample-1.jpg';
+import sampleFlyer2 from '@/images/flyers/sample-2.jpg';
+import sampleFlyer3 from '@/images/flyers/sample-3.jpg';
+
 export const METADATA = {
   HOME: {
     TITLE: 'TerraLoma | Residential Lots',
@@ -167,7 +171,8 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         { id: 2, image: lotA2, caption: 'Aerial View' },
         { id: 3, image: lotA3, caption: 'Test 3' },
         { id: 4, image: lotA4, caption: 'Test 4' }
-      ]
+      ],
+      badge: 'Active Contingent'
     },
     {
       value: 'LOT_B',
@@ -182,7 +187,8 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         { id: 3, image: lotB3, caption: '' },
         { id: 4, image: lotB4, caption: '' },
         { id: 5, image: lotB5, caption: '' }
-      ]
+      ],
+      badge: 'Spec Home'
     },
     {
       value: 'LOT_C',
@@ -250,7 +256,7 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
           caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
         }
       ],
-      isSold: true
+      badge: 'Sold'
     },
     {
       value: 'LOT_F',
@@ -346,7 +352,8 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
           caption:
             'Aerial view of TerraLoma Subdivision, the surrounding neighborhoods, and the Hill Country. The TerraScena Subdivision, similar style neighborhood, is located on the other side of Mirela Ann Rd.'
         }
-      ]
+      ],
+      badge: 'Pending'
     }
   ]
 };
@@ -390,7 +397,7 @@ export const DOCS_AND_LINKS_SECTION_CONTENT = {
     },
     {
       id: 3,
-      link: 'https://corridortitle.com',
+      link: 'https://buildnative.com',
       label: 'Preferred Builder',
       value: 'Build Native',
       logo: buildNative
@@ -400,6 +407,30 @@ export const DOCS_AND_LINKS_SECTION_CONTENT = {
 
 export const CONTACT_SECTION_CONTENT = {
   HEADING: 'Request Info'
+};
+
+export const FLYERS_SECTION_CONTENT = {
+  HEADING: 'Download Flyers',
+  FLYERS: [
+    {
+      id: 1,
+      title: 'TerraLoma',
+      thumbnail: sampleFlyer1,
+      link: 'documents/flyers/sample-1.pdf'
+    },
+    {
+      id: 2,
+      title: 'Residential Lots',
+      thumbnail: sampleFlyer1,
+      link: 'documents/flyers/sample-2.pdf'
+    },
+    {
+      id: 3,
+      title: 'Residential Lot A',
+      thumbnail: sampleFlyer1,
+      link: 'documents/flyers/sample-3.pdf'
+    }
+  ]
 };
 
 export const ASSOCIATIONS_SECTION_CONTENT = {
