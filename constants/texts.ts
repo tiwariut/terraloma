@@ -54,6 +54,10 @@ import corridorTitle from '@/images/corridor-title-logo.png';
 import workshopNo5 from '@/images/workshop-no-5-logo.png';
 import buildNative from '@/images/build-native-logo.png';
 
+import sampleFlyer1 from '@/images/flyers/sample-1.jpg';
+import sampleFlyer2 from '@/images/flyers/sample-2.jpg';
+import sampleFlyer3 from '@/images/flyers/sample-3.jpg';
+
 export const METADATA = {
   HOME: {
     TITLE: 'TerraLoma | Residential Lots',
@@ -403,6 +407,30 @@ export const DOCS_AND_LINKS_SECTION_CONTENT = {
 
 export const CONTACT_SECTION_CONTENT = {
   HEADING: 'Request Info'
+};
+
+export const FLYERS_SECTION_CONTENT = {
+  HEADING: 'Download Flyers',
+  FLYERS: [
+    {
+      id: 1,
+      title: 'TerraLoma',
+      thumbnail: sampleFlyer1,
+      link: 'documents/flyers/sample-1.pdf'
+    },
+    {
+      id: 2,
+      title: 'Residential Lots',
+      thumbnail: sampleFlyer1,
+      link: 'documents/flyers/sample-2.pdf'
+    },
+    {
+      id: 3,
+      title: 'Residential Lot A',
+      thumbnail: sampleFlyer1,
+      link: 'documents/flyers/sample-3.pdf'
+    }
+  ]
 };
 
 export const ASSOCIATIONS_SECTION_CONTENT = {

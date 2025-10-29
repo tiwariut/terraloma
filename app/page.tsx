@@ -18,7 +18,8 @@ import {
   AGENT_DETAILS,
   CONTACT_SECTION_CONTENT,
   RESIDENTIAL_LOTS_SECTION_CONTENT,
-  DOCS_AND_LINKS_SECTION_CONTENT
+  DOCS_AND_LINKS_SECTION_CONTENT,
+  FLYERS_SECTION_CONTENT
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
@@ -58,6 +59,8 @@ const {
   LINKS,
   LINK_ICON
 } = DOCS_AND_LINKS_SECTION_CONTENT;
+
+const { HEADING: FLYERS_HEADING, FLYERS } = FLYERS_SECTION_CONTENT;
 
 const { HEADING: ASSOCIATIONS_HEADING, LIST: ASSOCIATIONS_LIST } =
   ASSOCIATIONS_SECTION_CONTENT;
@@ -253,6 +256,34 @@ export default function Home() {
               {CONTACT_SECTION_CONTENT.HEADING}
             </h2>
             <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* FLYERS SECTION */}
+      <section id='flyers' className='flyers'>
+        <div className='container'>
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+            {FLYERS_HEADING}
+          </h2>
+          <div className='grid grid--3-cols'>
+            {FLYERS.map(({ id, title, thumbnail, link }) => (
+              <AnchorLink
+                key={id}
+                type='primary'
+                linkTo={link}
+                openInNewTab={true}
+              >
+                <div className='flyers__flyer'>
+                  <Image
+                    className='flyers__flyer-img'
+                    src={thumbnail}
+                    alt='title'
+                  />
+                  <h3>{title}</h3>
+                </div>
+              </AnchorLink>
+            ))}
           </div>
         </div>
       </section>
