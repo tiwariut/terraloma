@@ -19,7 +19,8 @@ import {
   CONTACT_SECTION_CONTENT,
   RESIDENTIAL_LOTS_SECTION_CONTENT,
   DOCS_AND_LINKS_SECTION_CONTENT,
-  FLYERS_SECTION_CONTENT
+  FLYERS_SECTION_CONTENT,
+  VIDEOS_SECTION_CONTENT
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
@@ -43,6 +44,8 @@ const {
 
 const { HEADING: RESIDENTIAL_LOTS_HEADING, LOTS } =
   RESIDENTIAL_LOTS_SECTION_CONTENT;
+
+const { HEADING: VIDEOS_HEADING, EMBEDDED_LINKS } = VIDEOS_SECTION_CONTENT;
 
 const {
   NAME: AGENT_NAME,
@@ -139,6 +142,29 @@ export default function Home() {
                 </div>
               )
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEOS SECTION */}
+      <section id='videos' className='videos'>
+        <div className='container'>
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+            {VIDEOS_HEADING}
+          </h2>
+          <div className='videos__list'>
+            {EMBEDDED_LINKS.map(({ id, title, link }) => (
+              <iframe
+                key={id}
+                width='100%'
+                height='315'
+                src={link}
+                title={title}
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                referrerPolicy='strict-origin-when-cross-origin'
+                allowFullScreen={true}
+              ></iframe>
+            ))}
           </div>
         </div>
       </section>
