@@ -37,6 +37,12 @@ export const HEADER_NAVIGATION = [
     navigateTo: '#residential-lots'
   },
   {
+    value: 'VIDEOS',
+    label: 'Videos',
+    group: NAVIGATION_GROUPS.GROUP_1.value,
+    navigateTo: '#videos'
+  },
+  {
     value: 'MAP',
     label: 'Map',
     group: NAVIGATION_GROUPS.GROUP_1.value,
@@ -59,12 +65,6 @@ export const HEADER_NAVIGATION = [
     label: 'Request Info',
     group: NAVIGATION_GROUPS.GROUP_1.value,
     navigateTo: '#contact'
-  },
-  {
-    value: 'FLYERS',
-    label: 'Flyers',
-    group: NAVIGATION_GROUPS.GROUP_1.value,
-    navigateTo: '#flyers'
   }
 ];
 
@@ -85,6 +85,11 @@ export const FOOTER_NAVIGATION = [
     navigateTo: '#residential-lots'
   },
   {
+    value: 'VIDEOS',
+    label: 'Videos',
+    navigateTo: '#videos'
+  },
+  {
     value: 'MAP',
     label: 'Map',
     navigateTo: '#map'
@@ -103,11 +108,6 @@ export const FOOTER_NAVIGATION = [
     value: 'REQUEST_INFO',
     label: 'Request Info',
     navigateTo: '#contact'
-  },
-  {
-    value: 'FLYERS',
-    label: 'Flyers',
-    navigateTo: '#flyers'
   }
 ];
 

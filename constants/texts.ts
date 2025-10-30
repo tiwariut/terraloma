@@ -405,6 +405,22 @@ export const DOCS_AND_LINKS_SECTION_CONTENT = {
   ]
 };
 
+export const VIDEOS_SECTION_CONTENT = {
+  HEADING: 'Videos',
+  EMBEDDED_LINKS: [
+    {
+      id: 1,
+      title: 'Luxury Lease in Headwaters',
+      link: 'https://www.youtube.com/embed/znksfyf5X7k?si=H-lXrFkznSUfLh2I'
+    },
+    {
+      id: 2,
+      title: 'Saratoga Hills Luxury',
+      link: 'https://www.youtube.com/embed/sM85U2pW4Zs?si=EWg0VKcN5Eii-ShX'
+    }
+  ]
+};
+
 export const CONTACT_SECTION_CONTENT = {
   HEADING: 'Request Info'
 };
