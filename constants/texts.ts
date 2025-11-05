@@ -167,10 +167,10 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         }
       ],
       images: [
-        { id: 1, image: lotA1, caption: 'Aerial View' },
-        { id: 2, image: lotA2, caption: 'Aerial View' },
-        { id: 3, image: lotA3, caption: 'Test 3' },
-        { id: 4, image: lotA4, caption: 'Test 4' }
+        { id: 1, image: lotA1, caption: 'Aerial Photo - Lot A' },
+        { id: 2, image: lotA2, caption: 'Aerial Photo - Lot A' },
+        { id: 3, image: lotA3, caption: 'Photo - Lot A' },
+        { id: 4, image: lotA4, caption: 'Photo - Lot A' }
       ],
       badge: 'Active Contingent'
     },
@@ -182,13 +182,12 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       price: '$285,000',
       description: '',
       images: [
-        { id: 1, image: lotB1, caption: 'Aerial View' },
-        { id: 2, image: lotB2, caption: 'Aerial View' },
-        { id: 3, image: lotB3, caption: '' },
-        { id: 4, image: lotB4, caption: '' },
-        { id: 5, image: lotB5, caption: '' }
-      ],
-      badge: 'Spec Home'
+        { id: 1, image: lotB1, caption: 'Aerial Photo - Lot B' },
+        { id: 2, image: lotB2, caption: 'Aerial Photo - Lot B' },
+        { id: 3, image: lotB3, caption: 'Photo - Lot B' },
+        { id: 4, image: lotB4, caption: 'Photo - Lot B' },
+        { id: 5, image: lotB5, caption: 'Photo - Lot B' }
+      ]
     },
     {
       value: 'LOT_C',
@@ -198,11 +197,12 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       price: '$285,000',
       description: '',
       images: [
-        { id: 1, image: lotC1, caption: 'Aerial View' },
-        { id: 2, image: lotC2, caption: 'Aerial View' },
-        { id: 3, image: lotC3, caption: '' },
-        { id: 4, image: lotC4, caption: '' }
-      ]
+        { id: 1, image: lotC1, caption: 'Aerial Photo - Lot C' },
+        { id: 2, image: lotC2, caption: 'Aerial Photo - Lot C' },
+        { id: 3, image: lotC3, caption: 'Photo - Lot C' },
+        { id: 4, image: lotC4, caption: 'Photo - Lot C' }
+      ],
+      badge: 'Spec Home'
     },
     {
       value: 'LOT_D',
@@ -219,11 +219,11 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         }
       ],
       images: [
-        { id: 1, image: lotD1, caption: 'Aerial View' },
-        { id: 2, image: lotD2, caption: 'Aerial View' },
-        { id: 3, image: lotD3, caption: '' },
-        { id: 4, image: lotD4, caption: '' },
-        { id: 5, image: lotD5, caption: '' }
+        { id: 1, image: lotD1, caption: 'Aerial Photo - Lot D' },
+        { id: 2, image: lotD2, caption: 'Aerial Photo - Lot D' },
+        { id: 3, image: lotD3, caption: 'Photo - Lot D' },
+        { id: 4, image: lotD4, caption: 'Photo - Lot D' },
+        { id: 5, image: lotD5, caption: 'Photo - Lot D' }
       ]
     },
     {
@@ -237,23 +237,26 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         {
           id: 1,
           image: lotE1,
-          caption:
-            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Aerial Photo - Lot E'
         },
         {
           id: 2,
           image: lotE2,
-          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot E'
         },
         {
           id: 3,
           image: lotE3,
-          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot E'
         },
         {
           id: 4,
           image: lotE4,
-          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot E'
         }
       ],
       badge: 'Sold'
@@ -269,35 +272,38 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         {
           id: 1,
           image: lotF1,
-          caption:
-            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Aerial Photo - Lot F'
         },
         {
           id: 2,
           image: lotF2,
-          caption:
-            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Aerial Photo - Lot F'
         },
         {
           id: 3,
           image: lotF3,
-          caption:
-            'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Aerial Photo - Lot F'
         },
         {
           id: 4,
           image: lotF4,
-          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot F'
         },
         {
           id: 5,
           image: lotF5,
-          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot F'
         },
         {
           id: 6,
           image: lotF6,
-          caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot F'
         }
       ]
     },
@@ -319,38 +325,44 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         {
           id: 1,
           image: lotG1,
-          caption:
-            'Aerial View - Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-        },
-        {
-          id: 2,
-          image: lotG2,
-          caption:
-            'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-        },
-        {
-          id: 3,
-          image: lotG3,
-          caption:
-            'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-        },
-        {
-          id: 4,
-          image: lotG4,
-          caption:
-            'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          // caption:
+          //   'Aerial View - Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Aerial Photo - Lot G'
         },
         {
           id: 5,
           image: lotG5,
-          caption:
-            'Aerial of TerraScena Subdivision located on the other side of Mirela Ann Rd. Deed Restrictions and HOA Documents, including architectural and building requirement, are very similar to TerraLoma.'
+          // caption:
+          //   'Aerial of TerraScena Subdivision located on the other side of Mirela Ann Rd. Deed Restrictions and HOA Documents, including architectural and building requirement, are very similar to TerraLoma.'
+          caption: ' Aerial Photo - Lot G'
         },
         {
           id: 6,
           image: lotG6,
-          caption:
-            'Aerial view of TerraLoma Subdivision, the surrounding neighborhoods, and the Hill Country. The TerraScena Subdivision, similar style neighborhood, is located on the other side of Mirela Ann Rd.'
+          // caption:
+          //   'Aerial view of TerraLoma Subdivision, the surrounding neighborhoods, and the Hill Country. The TerraScena Subdivision, similar style neighborhood, is located on the other side of Mirela Ann Rd.'
+          caption: 'Aerial Photo - Lot G'
+        },
+        {
+          id: 2,
+          image: lotG2,
+          // caption:
+          //   'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot G'
+        },
+        {
+          id: 3,
+          image: lotG3,
+          // caption:
+          //   'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot G'
+        },
+        {
+          id: 4,
+          image: lotG4,
+          // caption:
+          //   'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
+          caption: 'Photo - Lot G'
         }
       ],
       badge: 'Pending'
@@ -377,6 +389,16 @@ export const DOCS_AND_LINKS_SECTION_CONTENT = {
       id: 3,
       label: 'Recorded Plat For TerraLoma Subdivision',
       link: '/documents/recorded-plat.pdf'
+    },
+    {
+      id: 4,
+      label: 'Lot 4B, Werth Subdivision Topographic Survey',
+      link: '/documents/lot-4b-survey.pdf'
+    },
+    {
+      id: 5,
+      label: 'Lot 4C, Werth Subdivision Topographic Survey',
+      link: '/documents/lot-4c-survey.pdf'
     }
   ],
   LINK_ICON: ICON_LINK,
