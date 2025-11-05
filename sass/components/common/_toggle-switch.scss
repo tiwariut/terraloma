@@ -2,6 +2,11 @@
 
 /* Container for the toggle */
 .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.4rem;
+
   &__container {
     display: flex;
     align-items: center;
@@ -10,11 +15,6 @@
     font-weight: 500;
     padding-bottom: 3.2rem;
   }
-
-  position: relative;
-  display: inline-block;
-  width: 5rem;
-  height: 2.4rem;
 
   /* Hide default checkbox */
   & input {
