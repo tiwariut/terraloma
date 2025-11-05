@@ -8,7 +8,7 @@ import AgentModal from '@/components/AgentModal';
 import AnchorLink from '@/components/common/AnchorLink';
 import Carousel from '@/components/common/Carousel';
 import Icon from '@/components/common/Icon';
-import MapboxMap from '@/components/common/MapboxMap';
+import GoogleMap from '@/components/common/GoogleMap';
 import ParsedHTML from '@/components/common/ParsedHTML';
 
 import {
@@ -20,7 +20,8 @@ import {
   RESIDENTIAL_LOTS_SECTION_CONTENT,
   DOCS_AND_LINKS_SECTION_CONTENT,
   FLYERS_SECTION_CONTENT,
-  VIDEOS_SECTION_CONTENT
+  VIDEOS_SECTION_CONTENT,
+  MAP_SECTION_CONTENT
 } from '@/constants/texts';
 
 import roseCastro from '@/images/rose-castro.jpg';
@@ -46,6 +47,13 @@ const { HEADING: RESIDENTIAL_LOTS_HEADING, LOTS } =
   RESIDENTIAL_LOTS_SECTION_CONTENT;
 
 const { HEADING: VIDEOS_HEADING, EMBEDDED_LINKS } = VIDEOS_SECTION_CONTENT;
+
+const {
+  HEADING: MAP_HEADING,
+  CENTER,
+  POPUP_TEXT,
+  CATEGORIES
+} = MAP_SECTION_CONTENT;
 
 const {
   NAME: AGENT_NAME,
@@ -172,10 +180,14 @@ export default function Home() {
       {/* MAP SECTION */}
       <section id='map' className='map'>
         <div className='container'>
-          <MapboxMap
-            center={[-98.055, 30.257]}
-            zoom={10}
-            style={{ height: '400px', width: '100%' }}
+          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+            {MAP_HEADING}
+          </h2>
+          <GoogleMap
+            center={CENTER}
+            zoom={13}
+            popupText={POPUP_TEXT}
+            categories={CATEGORIES}
           />
         </div>
       </section>

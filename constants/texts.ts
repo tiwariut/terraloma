@@ -421,6 +421,24 @@ export const VIDEOS_SECTION_CONTENT = {
   ]
 };
 
+export const MAP_SECTION_CONTENT = {
+  HEADING: 'Map & Nearby Places',
+  CENTER: {
+    lat: 30.257,
+    lng: -98.055
+  },
+  POPUP_TEXT: 'TerraLoma - Residential Lots A through G on Mirela Ann Rd.',
+  CATEGORIES: [
+    { id: 'school', label: 'Schools', icon: '🏫' },
+    { id: 'park', label: 'Parks', icon: '🌳' },
+    { id: 'bar', label: 'Bars', icon: '🍺' },
+    { id: 'restaurant', label: 'Restaurants', icon: '🍽️' },
+    { id: 'cafe', label: 'Coffee', icon: '☕' },
+    { id: 'atm', label: 'ATMs', icon: '💰' },
+    { id: 'gym', label: 'Gyms', icon: '💪' }
+  ]
+};
+
 export const CONTACT_SECTION_CONTENT = {
   HEADING: 'Request Info'
 };

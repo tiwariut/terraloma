@@ -1,0 +1,30 @@
+@use '../../abstracts/variables';
+
+.google-map {
+  &__category-list {
+    margin-bottom: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__category-item {
+    padding: 1.2rem 2.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: variables.$default-transition;
+
+    &:hover {
+      background-color: variables.$color-grey-light-1;
+    }
+
+    &--active {
+      background-color: variables.$color-grey-light-2 !important;
+    }
+  }
+}
