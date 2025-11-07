@@ -179,17 +179,15 @@ export default function Home() {
 
       {/* MAP SECTION */}
       <section id='map' className='map'>
-        <div className='container'>
-          <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
-            {MAP_HEADING}
-          </h2>
-          <GoogleMap
-            center={CENTER}
-            zoom={13}
-            popupText={POPUP_TEXT}
-            categories={CATEGORIES}
-          />
-        </div>
+        <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
+          {MAP_HEADING}
+        </h2>
+        <GoogleMap
+          center={CENTER}
+          zoom={13}
+          popupText={POPUP_TEXT}
+          categories={CATEGORIES}
+        />
       </section>
 
       {/* AGENT SECTION */}

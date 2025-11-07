@@ -15,7 +15,7 @@ export default function GoogleMap({
   zoom,
   popupText,
   categories,
-  style = { height: '400px', width: '100%' }
+  style = { height: '500px', width: '100%' }
 }: GoogleMapProps) {
   const [activeCategoryId, setActiveCategoryId] = useState<string>('');
 
