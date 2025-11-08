@@ -9,6 +9,9 @@ import texasRealtors from '@/images/texas-realtors.png';
 import realtor from '@/images/realtor.png';
 import austinBoardOfRealtors from '@/images/austin-board-of-realtors.png';
 
+import common1 from '@/images/lots/common-1.jpg';
+import common2 from '@/images/lots/common-2.jpg';
+
 import lotA1 from '@/images/lots/lot-a/lot-a-1.jpg';
 import lotA2 from '@/images/lots/lot-a/lot-a-2.jpg';
 import lotA3 from '@/images/lots/lot-a/lot-a-3.jpg';
@@ -19,11 +22,13 @@ import lotB2 from '@/images/lots/lot-b/lot-b-2.jpg';
 import lotB3 from '@/images/lots/lot-b/lot-b-3.jpg';
 import lotB4 from '@/images/lots/lot-b/lot-b-4.jpg';
 import lotB5 from '@/images/lots/lot-b/lot-b-5.jpg';
+import lotBSurvey from '@/images/lots/lot-b/lot-b-survey.jpg';
 
 import lotC1 from '@/images/lots/lot-c/lot-c-1.jpg';
 import lotC2 from '@/images/lots/lot-c/lot-c-2.jpg';
 import lotC3 from '@/images/lots/lot-c/lot-c-3.jpg';
 import lotC4 from '@/images/lots/lot-c/lot-c-4.jpg';
+import lotCSurvey from '@/images/lots/lot-c/lot-c-survey.jpg';
 
 import lotD1 from '@/images/lots/lot-d/lot-d-1.jpg';
 import lotD2 from '@/images/lots/lot-d/lot-d-2.jpg';
@@ -47,16 +52,19 @@ import lotG1 from '@/images/lots/lot-g/lot-g-1.jpg';
 import lotG2 from '@/images/lots/lot-g/lot-g-2.jpg';
 import lotG3 from '@/images/lots/lot-g/lot-g-3.jpg';
 import lotG4 from '@/images/lots/lot-g/lot-g-4.jpg';
-import lotG5 from '@/images/lots/lot-g/lot-g-5.jpg';
-import lotG6 from '@/images/lots/lot-g/lot-g-6.jpg';
 
 import corridorTitle from '@/images/corridor-title-logo.png';
 import workshopNo5 from '@/images/workshop-no-5-logo.png';
 import buildNative from '@/images/build-native-logo.png';
 
-import sampleFlyer1 from '@/images/flyers/sample-1.jpg';
-import sampleFlyer2 from '@/images/flyers/sample-2.jpg';
-import sampleFlyer3 from '@/images/flyers/sample-3.jpg';
+import terralomaFlyer from '@/images/flyers/terraloma.png';
+import lotAFlyer from '@/images/flyers/lot-a.png';
+import lotBFlyer from '@/images/flyers/lot-b.png';
+import lotCFlyer from '@/images/flyers/lot-c.png';
+import lotDFlyer from '@/images/flyers/lot-d.png';
+import lotEFlyer from '@/images/flyers/lot-e.png';
+import lotFFlyer from '@/images/flyers/lot-f.png';
+import lotGFlyer from '@/images/flyers/lot-e.png';
 
 export const METADATA = {
   HOME: {
@@ -167,10 +175,10 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         }
       ],
       images: [
-        { id: 1, image: lotA1, caption: 'Aerial Photo - Lot A' },
-        { id: 2, image: lotA2, caption: 'Aerial Photo - Lot A' },
-        { id: 3, image: lotA3, caption: 'Photo - Lot A' },
-        { id: 4, image: lotA4, caption: 'Photo - Lot A' }
+        { id: 1, image: lotA1, caption: 'Aerial Lot A - 1.12 acres' },
+        { id: 2, image: lotA2, caption: 'Aerial Lot A - 1.12 acres' },
+        { id: 3, image: lotA3, caption: 'Lot A - 1.12 acres' },
+        { id: 4, image: lotA4, caption: 'Lot A - 1.12 acres' }
       ],
       badge: 'Active Contingent'
     },
@@ -182,11 +190,17 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       price: '$285,000',
       description: '',
       images: [
-        { id: 1, image: lotB1, caption: 'Aerial Photo - Lot B' },
-        { id: 2, image: lotB2, caption: 'Aerial Photo - Lot B' },
-        { id: 3, image: lotB3, caption: 'Photo - Lot B' },
-        { id: 4, image: lotB4, caption: 'Photo - Lot B' },
-        { id: 5, image: lotB5, caption: 'Photo - Lot B' }
+        { id: 1, image: lotB1, caption: 'Aerial Lot B - 1.13 Acres' },
+        { id: 2, image: lotB2, caption: 'Aerial Lot B - 1.13 Acres' },
+        { id: 3, image: lotB3, caption: 'Lot B - 1.13 Acres' },
+        { id: 4, image: lotB4, caption: 'Lot B - 1.13 Acres' },
+        { id: 5, image: lotB5, caption: 'Lot B - 1.13 Acres' },
+        {
+          id: 5,
+          image: lotBSurvey,
+          caption: 'Lot 4B, Werth Subdivision Topographic Survey',
+          captionColor: 'dark'
+        }
       ]
     },
     {
@@ -197,10 +211,16 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
       price: '$285,000',
       description: '',
       images: [
-        { id: 1, image: lotC1, caption: 'Aerial Photo - Lot C' },
-        { id: 2, image: lotC2, caption: 'Aerial Photo - Lot C' },
-        { id: 3, image: lotC3, caption: 'Photo - Lot C' },
-        { id: 4, image: lotC4, caption: 'Photo - Lot C' }
+        { id: 1, image: lotC1, caption: 'Aerial Lot C - 1.12 acres' },
+        { id: 2, image: lotC2, caption: 'Aerial Lot C - 1.12 acres' },
+        { id: 3, image: lotC3, caption: 'Lot C - 1.12 acres' },
+        { id: 4, image: lotC4, caption: 'Lot C - 1.12 acres' },
+        {
+          id: 4,
+          image: lotCSurvey,
+          caption: 'Lot 4C, Werth Subdivision Topographic Survey',
+          captionColor: 'dark'
+        }
       ],
       badge: 'Spec Home'
     },
@@ -219,11 +239,11 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         }
       ],
       images: [
-        { id: 1, image: lotD1, caption: 'Aerial Photo - Lot D' },
-        { id: 2, image: lotD2, caption: 'Aerial Photo - Lot D' },
-        { id: 3, image: lotD3, caption: 'Photo - Lot D' },
-        { id: 4, image: lotD4, caption: 'Photo - Lot D' },
-        { id: 5, image: lotD5, caption: 'Photo - Lot D' }
+        { id: 1, image: lotD1, caption: 'Aerial Lot D - 1.43 acres' },
+        { id: 2, image: lotD2, caption: 'Aerial Lot D - 1.43 acres' },
+        { id: 3, image: lotD3, caption: 'Lot D - 1.43 acres' },
+        { id: 4, image: lotD4, caption: 'Lot D - 1.43 acres' },
+        { id: 5, image: lotD5, caption: 'Lot D - 1.43 acres' }
       ]
     },
     {
@@ -237,26 +257,23 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         {
           id: 1,
           image: lotE1,
-          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Aerial Photo - Lot E'
+          caption:
+            'Aerial Lot E - 1.67 acres. Shared Driveway off Mirela Ann Rd. with Lots F and G.'
         },
         {
           id: 2,
           image: lotE2,
-          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot E'
+          caption: 'Lot E - 1.67 acres'
         },
         {
           id: 3,
           image: lotE3,
-          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot E'
+          caption: 'Lot E - 1.67 acres'
         },
         {
           id: 4,
           image: lotE4,
-          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot E'
+          caption: 'Lot E - 1.67 acres'
         }
       ],
       badge: 'Sold'
@@ -272,38 +289,35 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         {
           id: 1,
           image: lotF1,
-          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Aerial Photo - Lot F'
+          caption:
+            'Aerial Lot F - 2.34 acres. Shared Driveway off Mirela Ann Rd. with Lots E and G.'
         },
         {
           id: 2,
           image: lotF2,
-          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Aerial Photo - Lot F'
+          caption:
+            'Aerial Lot F - 2.34 acres. Shared Driveway off Mirela Ann Rd. with Lots E and G.'
         },
         {
           id: 3,
           image: lotF3,
-          // caption: 'Aerial View - Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Aerial Photo - Lot F'
+          caption:
+            'Aerial Lot F - 2.34 acres. Shared Driveway off Mirela Ann Rd. with Lots E and G.'
         },
         {
           id: 4,
           image: lotF4,
-          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot F'
+          caption: 'Lot F - 2.34 acres'
         },
         {
           id: 5,
           image: lotF5,
-          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot F'
+          caption: 'Lot F - 2.34 acres'
         },
         {
           id: 6,
           image: lotF6,
-          // caption: 'Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot F'
+          caption: 'Lot F - 2.34 acres'
         }
       ]
     },
@@ -325,47 +339,40 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
         {
           id: 1,
           image: lotG1,
-          // caption:
-          //   'Aerial View - Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Aerial Photo - Lot G'
-        },
-        {
-          id: 5,
-          image: lotG5,
-          // caption:
-          //   'Aerial of TerraScena Subdivision located on the other side of Mirela Ann Rd. Deed Restrictions and HOA Documents, including architectural and building requirement, are very similar to TerraLoma.'
-          caption: ' Aerial Photo - Lot G'
-        },
-        {
-          id: 6,
-          image: lotG6,
-          // caption:
-          //   'Aerial view of TerraLoma Subdivision, the surrounding neighborhoods, and the Hill Country. The TerraScena Subdivision, similar style neighborhood, is located on the other side of Mirela Ann Rd.'
-          caption: 'Aerial Photo - Lot G'
+          caption:
+            'Aerial Lot G - 2.66 acres. Shared Driveway off Mirela Ann Rd. with Lots E and F.'
         },
         {
           id: 2,
           image: lotG2,
-          // caption:
-          //   'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot G'
+          caption: 'Lot G - 2.66 acres'
         },
         {
           id: 3,
           image: lotG3,
-          // caption:
-          //   'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot G'
+          caption: 'Lot G - 2.66 acres'
         },
         {
           id: 4,
           image: lotG4,
-          // caption:
-          //   'Highest Spot in TerraLoma Subdivision. Panaromic view! Shared Driveway off of Mirela Ann Rd. with Lot E, F, and G.'
-          caption: 'Photo - Lot G'
+          caption: 'Lot G - 2.66 acres'
         }
       ],
       badge: 'Pending'
+    }
+  ],
+  COMMON_IMAGES: [
+    {
+      id: 1,
+      image: common1,
+      caption:
+        'Aerial of TerraScena Subdivision located on the other side of Mirela Ann Rd. Deed Restrictions and HOA Documents, including architectural and building requirements, are very similar to TerraLoma.'
+    },
+    {
+      id: 2,
+      image: common2,
+      caption:
+        'Aerial of TerraScena Subdivision located on the other side of Mirela Ann Rd. Deed Restrictions and HOA Documents, including architectural and building requirements, are very similar to TerraLoma.'
     }
   ]
 };
@@ -470,21 +477,51 @@ export const FLYERS_SECTION_CONTENT = {
   FLYERS: [
     {
       id: 1,
-      title: 'TerraLoma',
-      thumbnail: sampleFlyer1,
-      link: 'documents/flyers/sample-1.pdf'
+      title: 'Residential Lots',
+      thumbnail: terralomaFlyer,
+      link: 'documents/flyers/terraloma.pdf'
     },
     {
       id: 2,
-      title: 'Residential Lots',
-      thumbnail: sampleFlyer1,
-      link: 'documents/flyers/sample-2.pdf'
+      title: 'Residential Lot A',
+      thumbnail: lotAFlyer,
+      link: 'documents/flyers/lot-a.pdf'
     },
     {
       id: 3,
-      title: 'Residential Lot A',
-      thumbnail: sampleFlyer1,
-      link: 'documents/flyers/sample-3.pdf'
+      title: 'Residential Lot B',
+      thumbnail: lotBFlyer,
+      link: 'documents/flyers/lob-b.pdf'
+    },
+    {
+      id: 4,
+      title: 'Residential Lot C',
+      thumbnail: lotCFlyer,
+      link: 'documents/flyers/lot-c.pdf'
+    },
+    {
+      id: 5,
+      title: 'Residential Lot D',
+      thumbnail: lotDFlyer,
+      link: 'documents/flyers/lot-d.pdf'
+    },
+    {
+      id: 6,
+      title: 'Residential Lot E',
+      thumbnail: lotEFlyer,
+      link: 'documents/flyers/lot-e.pdf'
+    },
+    {
+      id: 7,
+      title: 'Residential Lot F',
+      thumbnail: lotFFlyer,
+      link: 'documents/flyers/lot-f.pdf'
+    },
+    {
+      id: 8,
+      title: 'Residential Lot G',
+      thumbnail: lotGFlyer,
+      link: 'documents/flyers/lot-g.pdf'
     }
   ]
 };

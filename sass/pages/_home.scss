@@ -224,6 +224,13 @@
   padding: variables.$default-section-padding;
   font-size: 1.4rem;
 
+  &__list {
+    display: flex;
+    gap: 6.4rem;
+    padding-bottom: 3.2rem;
+    @include mixins.custom-scrollbar-x;
+  }
+
   &__flyer {
     display: flex;
     flex-direction: column;

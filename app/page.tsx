@@ -43,8 +43,11 @@ const {
   }
 } = DESCRIPTION_SECTION_CONTENT;
 
-const { HEADING: RESIDENTIAL_LOTS_HEADING, LOTS } =
-  RESIDENTIAL_LOTS_SECTION_CONTENT;
+const {
+  HEADING: RESIDENTIAL_LOTS_HEADING,
+  LOTS,
+  COMMON_IMAGES
+} = RESIDENTIAL_LOTS_SECTION_CONTENT;
 
 const { HEADING: VIDEOS_HEADING, EMBEDDED_LINKS } = VIDEOS_SECTION_CONTENT;
 
@@ -116,39 +119,43 @@ export default function Home() {
 
           <div className='residential-lots__lots'>
             {LOTS.map(
-              ({ value, name, address, area, price, links, images, badge }) => (
-                <div key={value} className='residential-lots__lot'>
-                  <div className='residential-lots__info'>
-                    <h3 className='heading-tertiary u-highlight-text-primary u-text-bold u-margin-bottom-small'>
-                      {name}
-                    </h3>
-                    <p>{address}</p>
-                    <p>
-                      {area} for {price}
-                    </p>
-                    {links?.map(({ id, link, label }) => (
-                      <AnchorLink
-                        type='primary'
-                        linkTo={link}
-                        openInNewTab={true}
-                        key={id}
-                      >
-                        {label}
-                      </AnchorLink>
-                    ))}
-                  </div>
+              ({ value, name, address, area, price, links, images, badge }) => {
+                const lotImages = [...images, ...COMMON_IMAGES];
 
-                  <div className='residential-lots__image-container'>
-                    <Carousel images={images} />
+                return (
+                  <div key={value} className='residential-lots__lot'>
+                    <div className='residential-lots__info'>
+                      <h3 className='heading-tertiary u-highlight-text-primary u-text-bold u-margin-bottom-small'>
+                        {name}
+                      </h3>
+                      <p>{address}</p>
+                      <p>
+                        {area} for {price}
+                      </p>
+                      {links?.map(({ id, link, label }) => (
+                        <AnchorLink
+                          type='primary'
+                          linkTo={link}
+                          openInNewTab={true}
+                          key={id}
+                        >
+                          {label}
+                        </AnchorLink>
+                      ))}
+                    </div>
 
-                    {badge && (
-                      <span className='residential-lots__badge'>
-                        {badge.toUpperCase()}
-                      </span>
-                    )}
+                    <div className='residential-lots__image-container'>
+                      <Carousel images={lotImages} />
+
+                      {badge && (
+                        <span className='residential-lots__badge'>
+                          {badge.toUpperCase()}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )
+                );
+              }
             )}
           </div>
         </div>
@@ -272,15 +279,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-
-            {/* <ul className='docs-and-links__links'>
-              <AnchorLink type='primary' linkTo={DOCUMENTS[0].link}>
-                <Icon name={DOCUMENT_ICON} blockClass={''} />
-                {DOCUMENTS[0].label}
-              </AnchorLink>
-            </ul> */}
           </div>
-          {/* <Icon name={ICON_LINK} blockClass={''} /> */}
         </div>
       </section>
 
@@ -302,7 +301,7 @@ export default function Home() {
           <h2 className='heading-secondary u-highlight-text-primary u-margin-bottom-medium u-center-text'>
             {FLYERS_HEADING}
           </h2>
-          <div className='grid grid--3-cols'>
+          <div className='flyers__list'>
             {FLYERS.map(({ id, title, thumbnail, link }) => (
               <AnchorLink
                 key={id}

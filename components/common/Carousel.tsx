@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-
 import Image from 'next/image';
+
 import Modal from './Modal';
 
 type CarouselProps = {
@@ -31,33 +31,35 @@ const Carousel = ({ images }: CarouselProps) => {
     return (
       <div className='carousel'>
         <div className='carousel__container'>
-          {images.map(({ id, image, caption }: any, index: number) => {
-            if (activeImageIndex === index) {
-              return (
-                <div
-                  key={id}
-                  className='carousel__slide fade'
-                  onClick={() => !isPreviewOpen && setIsPreviewOpen(true)}
-                >
+          {images.map(
+            ({ id, image, caption, captionColor }: any, index: number) => {
+              if (activeImageIndex === index) {
+                return (
                   <div
-                    className={`carousel__number ${isPreviewOpen ? 'carousel__number--preview' : ''}`}
+                    key={id}
+                    className='carousel__slide fade'
+                    onClick={() => !isPreviewOpen && setIsPreviewOpen(true)}
                   >
-                    {++index} / {images.length}
+                    <div
+                      className={`carousel__number ${isPreviewOpen ? 'carousel__number--preview' : ''}`}
+                    >
+                      {++index} / {images.length}
+                    </div>
+                    <Image
+                      className={`carousel__image ${isPreviewOpen ? 'carousel__image--preview' : ''}`}
+                      src={image}
+                      alt={caption}
+                    />
+                    <div
+                      className={`carousel__caption ${isPreviewOpen ? 'carousel__caption--preview' : ''} ${captionColor === 'dark' ? 'carousel__caption--dark' : ''}`}
+                    >
+                      {caption}
+                    </div>
                   </div>
-                  <Image
-                    className={`carousel__image ${isPreviewOpen ? 'carousel__image--preview' : ''}`}
-                    src={image}
-                    alt={caption}
-                  />
-                  <div
-                    className={`carousel__caption ${isPreviewOpen ? 'carousel__caption--preview' : ''}`}
-                  >
-                    {caption}
-                  </div>
-                </div>
-              );
+                );
+              }
             }
-          })}
+          )}
 
           <a
             className={`carousel__control carousel__control--prev ${isPreviewOpen ? 'carousel__control--preview' : ''}`}

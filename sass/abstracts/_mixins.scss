@@ -26,6 +26,32 @@
   }
 }
 
+@mixin custom-scrollbar-x {
+  overflow-x: hidden;
+
+  &:hover {
+    overflow-x: auto;
+  }
+
+  &::-webkit-scrollbar {
+    height: 4px;
+
+    /* Track */
+    &-track {
+      background: variables.$color-grey-light-2;
+    }
+
+    /* Handle */
+    &-thumb {
+      background: variables.$color-grey-dark-3;
+
+      &:hover {
+        background: variables.$color-grey-dark-2;
+      }
+    }
+  }
+}
+
 @mixin rounded-icon-filled($background-color, $icon-color) {
   &__icon-container {
     display: flex;
