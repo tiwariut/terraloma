@@ -46,18 +46,18 @@ const ContactForm = () => {
     }
 
     try {
-      // const response = await fetch('/api/send', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify({ name, email, phone, message })
-      // });
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, phone, message })
+      });
 
-      // const data = await response.json();
-      // if (!response.ok) {
-      //   throw new Error(data.error || 'Something went wrong');
-      // }
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
 
       // Clear form and show success message
       setName('');

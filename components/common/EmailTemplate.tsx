@@ -2,24 +2,23 @@ interface EmailTemplateProps {
   name: string;
   phoneNumber: string;
   email: string;
-  rentalAddress: string;
+  message: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   name,
   phoneNumber,
   email,
-  rentalAddress
+  message
 }) => (
   <div style={containerStyle}>
     <div style={headerStyle}>
-      <h1 style={titleStyle}>Rental Analysis Request</h1>
+      <h1 style={titleStyle}>Info Request</h1>
     </div>
 
     <div style={contentStyle}>
       <p style={introStyle}>
-        A new rental analysis request has been submitted with the following
-        details:
+        A new info request has been submitted with the following details:
       </p>
 
       <div style={detailsContainerStyle}>
@@ -39,8 +38,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         </div>
 
         <div style={detailRowStyle}>
-          <span style={labelStyle}>Rental Address: </span>
-          <span style={valueStyle}> {rentalAddress}</span>
+          <span style={labelStyle}>Message: </span>
+          <span style={valueStyle}> {message}</span>
         </div>
       </div>
     </div>
@@ -67,8 +66,8 @@ const containerStyle = {
 };
 
 const headerStyle = {
-  backgroundColor: '#1a365d',
-  background: 'linear-gradient(135deg, #1a365d 0%, #2a4365 100%)',
+  backgroundColor: '#3d3a38',
+  background: 'linear-gradient(135deg, #3d3a38 0%, #5c5754 100%)',
   padding: '36px',
   borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
 };
