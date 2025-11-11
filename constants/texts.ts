@@ -340,7 +340,7 @@ export const RESIDENTIAL_LOTS_SECTION_CONTENT = {
           id: 1,
           image: lotG1,
           caption:
-            'Aerial Lot G - 2.66 acres. Shared Driveway off Mirela Ann Rd. with Lots E and F.'
+            'Aerial Lot G - 2.66 acres. Shared Driveway off Mirela Ann Rd. with Lots E and F. Lot is located at the highest point of the TerraLoma neighborhood.'
         },
         {
           id: 2,
@@ -491,7 +491,7 @@ export const FLYERS_SECTION_CONTENT = {
       id: 3,
       title: 'Residential Lot B',
       thumbnail: lotBFlyer,
-      link: 'documents/flyers/lob-b.pdf'
+      link: 'documents/flyers/lot-b.pdf'
     },
     {
       id: 4,
